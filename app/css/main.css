@@ -4015,6 +4015,11 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 500px) {
+  .card-main__button_card {
+    padding: 10px;
+  }
+}
 .card-main__next {
   right: 0;
 }
@@ -4119,7 +4124,7 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 500px) {
   .card-main__inner {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 }
 .card-main__bottom {
@@ -7027,27 +7032,25 @@ body .inputMain.focus-visible ~ .item-form__border::before {
 }
 @media (max-width: 1600px) {
   .card-block__items {
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .card-block__items {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 700px) {
   .card-block__items {
     grid-gap: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .card-block__items {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
   }
 }
 @media screen and (max-width: 500px) {
   .card-block__items {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
   }
 }
 @media (min-width: 1024px) {
