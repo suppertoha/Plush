@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container container">
+      <ul>
+        <li class="button-modall" data-graph-path="modal-info1">
+          <button class="btn"><span>modal-1</span></button>
+        </li>
+
+        <li class="button-modall" data-graph-path="modal-info2">
+          <button class="btn"><span>modal-2</span></button>
+        </li>
+
+        <li class="button-modall" data-graph-path="modal-info3">
+          <button class="btn"><span>modal-3</span></button>
+        </li>
+
+        <li class="button-modall" data-graph-path="modal-info4">
+          <button class="btn"><span>modal-4</span></button>
+        </li>
+
+        <li class="button-modall" data-graph-path="modal-info5">
+          <button class="btn"><span>modal-5</span></button>
+        </li>
+      </ul>
+
+      @include('partials/_modal-next.html')
+    </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 32px;
+  width: 158px;
+  height: 44px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 2;
+  outline: 0;
+  outline-offset: 0;
+background: transparent;
+  @include max1024 {
+    right: 20px;
+  }
+
+  @include max768 {
+    top: 20px;
+    width: calc(100% - 30px);
+    left: 15px;
+    right: 0;
+  }
+}
+
+.search-form__input {
+  margin: 0;
+  line-height: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  padding: 0px 50px 0px 23px;
+  font-size: 16px;
+  color: #000;
+  box-shadow: none;
+  outline: 0;
+  outline-offset: 0;
+  padding: 14px 53px 0px 15px;
+  @include max600 {
+    padding: 14px 53px 0px 15px;
+  }
+
+}
+
+.search-form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-form__btn .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-form {
+  .inputMain:focus ~ .form-label,
+  .inputMain:not(:placeholder-shown) ~ .form-label {
+    top: 3px;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    font-size: 12px;
+    box-shadow: none;
+    left: 18px;
+
+    @include max600 {
+      top: 3px;
+    }
+  }
+
+  .inputMain:hover {
+    box-shadow: none;
+  }
+}
+
+.search-form--active {
+  width: 39%;
+  @include max1366 {
+    width: 32%;
+  }
+
+  @include max768 {
+    width: calc(100% - 30px);
+  }
+}
+
+.main-container-t {
+  position: relative;
+  padding-right: 100px;
+}
+
+.form-label_search {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+
+  color: rgba(30, 30, 30, 0.5);
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container container-main">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link"
+                      >Личные кабинет</a
+                    >
+                  </li>
+                  <li class="navigation__item">История заказов</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <section class="personal-area">
+                <div class="personal-area__inner container container-main">
+                  <div class="personal-area__nav">
+                    <ul class="personal-area__buttons buttons-el">
+                      <li class="buttons-el__item">
+                        <a href="#" class="buttons-el__button">
+                          Личные данные
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a href="#" class="buttons-el__button">
+                          Адрес доставки
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button active">
+                          История заказов
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Отследить заказ
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Отследить заказ
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Корзина
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div class="personal-area__fon">
+                      <img
+                        loading="lazy"
+                        src="img/personal-icon3.svg"
+                        class="image"
+                        width=""
+                        height=""
+                        alt="fon-icon"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="personal-area__body">
+                    <div class="personal-area__top">
+                      <h1 class="personal-area__title title">
+                        История заказов
+                      </h1>
+                    </div>
+
+                    <div class="personal-area__card card-goods">
+                      <div class="card-goods">
+                        <div class="card-goods__inner">
+                          <div class="card-goods__header">
+                            <div class="card-goods__left-block">
+                              <div class="card-goods__buttons buttons-block">
+                                <div class="buttons-block__items">
+                                  <a
+                                    href="#"
+                                    class="buttons-block__button button-border active"
+                                  >
+                                    Все
+                                  </a>
+
+                                  <a
+                                    href="#"
+                                    class="buttons-block__button button-border"
+                                  >
+                                    В этом месяце
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-goods__right-block card-goods__right-block--m-none">
+                              <form
+                                action="#"
+                                class="block-form__item item-form card-goods__search"
+                              >
+                                <div
+                                  class="item-form__wrap form-item search-form"
+                                >
+                                  <input
+                                    class="item-form__input search-form__input inputMain"
+                                    id="city"
+                                    type="text"
+                                    name="city"
+                                    placeholder=" "
+                                  />
+                                  <label
+                                    for="city"
+                                    class="item-form__label form-label form-label_search"
+                                    >Поиск</label
+                                  >
+                                  <button
+                                    type="button"
+                                    class="search-form__btn"
+                                    name="s"
+                                    value="Поиск"
+                                  >
+                                    <img
+                                      loading="lazy"
+                                      src="img/search-form.svg"
+                                      class="image"
+                                      width=""
+                                      height=""
+                                      alt="search"
+                                    />
+                                  </button>
+                                  <div class="item-form__border"></div>
+                                </div>
+                                <small
+                                  type="text"
+                                  name="city"
+                                  class="reviews-city__error-msg item-form__error"
+                                  >Заполните поле</small
+                                >
+                              </form>
+                            </div>
+                          </div>
+                          <ul class="card-goods__items">
+                            <li class="card-goods__item card-goods__item--flex">
+                              <div class="card-goods__left-block">
+                                <div class="card-goods__order order">
+                                  <div class="order__top">
+                                    <span class="order__name">Заказ №1202</span>
+                                    <span class="order__description"
+                                      >от 24 марта 2023</span
+                                    >
+                                  </div>
+                                  <a href="#" class="order__button button-text"
+                                    >Подробнее</a
+                                  >
+                                </div>
+                              </div>
+
+                              <div class="card-goods__right-block total">
+                                <div class="card-goods__total ">
+                                  <span class="total__description"
+                                    >9 товаров</span
+                                  >
+                                  <div class="total__block">
+                                    <span class="total__name">Итого</span>
+                                    <span class="total__sum">975 ₽</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="card-goods__item card-goods__item--flex">
+                              <div class="card-goods__left-block">
+                                <div class="card-goods__order order">
+                                  <div class="order__top">
+                                    <span class="order__name">Заказ №1202</span>
+                                    <span class="order__description"
+                                      >от 24 марта 2023</span
+                                    >
+                                  </div>
+                                  <a href="#" class="order__button button-text"
+                                    >Подробнее</a
+                                  >
+                                </div>
+                              </div>
+
+                              <div class="card-goods__right-block total">
+                                <div class="card-goods__total ">
+                                  <span class="total__description"
+                                    >9 товаров</span
+                                  >
+                                  <div class="total__block">
+                                    <span class="total__name">Итого</span>
+                                    <span class="total__sum">975 ₽</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="card-goods__item card-goods__item--flex">
+                              <div class="card-goods__left-block">
+                                <div class="card-goods__order order">
+                                  <div class="order__top">
+                                    <span class="order__name">Заказ №1202</span>
+                                    <span class="order__description"
+                                      >от 24 марта 2023</span
+                                    >
+                                  </div>
+                                  <a href="#" class="order__button button-text"
+                                    >Подробнее</a
+                                  >
+                                </div>
+                              </div>
+
+                              <div class="card-goods__right-block total">
+                                <div class="card-goods__total ">
+                                  <span class="total__description"
+                                    >9 товаров</span
+                                  >
+                                  <div class="total__block">
+                                    <span class="total__name">Итого</span>
+                                    <span class="total__sum">975 ₽</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+  </body>
+</html>

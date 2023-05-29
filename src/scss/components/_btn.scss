@@ -1,0 +1,469 @@
+.btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border: none;
+  min-width: 245px;
+  height: 48px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 20px;
+
+  @include max1366 {
+    height: 42px;
+    font-size: 20px;
+  }
+
+  @include max768 {
+    font-size: 18px;
+  }
+
+  @include max600 {
+    max-height: 46px;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  background-image: linear-gradient(79.28deg, #ad6ed3 25.33%, #efa1c3 82.39%);
+  transition: background 0.5s ease;
+  background-color: transparent;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background: transparent;
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  @include min1024 {
+    &:hover {
+      &:before {
+        background: #efa1c3;
+      }
+    }
+  }
+}
+
+.btn_ {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border: none;
+  min-width: 245px;
+  height: 48px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e1e1e;
+  padding: 0 20px;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #efa1c3;
+
+  @include max1366 {
+    height: 42px;
+    font-size: 20px;
+  }
+
+  @include max768 {
+    font-size: 18px;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  @include min1024 {
+    &:hover {
+      background: #ad6ed3;
+    }
+  }
+}
+
+.delete-btn {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  border: none;
+  background: none;
+  color: rgba(30, 30, 30, 0.5);
+  transition: 0.3s;
+  cursor: pointer;
+  @include min1024 {
+    &:hover {
+      color: #EFA1C3;
+      text-shadow: 0px 0px 1px #EFA1C3;
+    }
+  }
+  @include max768 {
+    font-size: 16px;
+  }
+
+  @include max600 {
+    font-size: 14px;
+  }
+}
+
+.clear-btn {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(30, 30, 30, 0.5);
+  background: #efeeee;
+  border-radius: 15px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  span {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: rgba(30, 30, 30, 0.5);
+    transition: 0.3s;
+  }
+
+  @include min1024 {
+    &:hover {
+      color: #1e1e1e;
+      background: #fad6d6;
+      svg {
+        fill: #1e1e1e;
+      }
+    }
+  }
+}
+
+.button-text {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #efa1c3;
+  transition: 0.3s;
+
+  @include min1024 {
+    &:hover {
+      text-shadow: 0px 0px 1px #EFA1C3;
+    }
+  }
+
+  @include max600 {
+    font-size: 16px;
+  }
+}
+
+.button-border {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  padding: 0px 19px;
+  border: 2px solid #ad6ed3;
+  border-radius: 15px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  height: 42px;
+  font-size: 18px;
+  line-height: 1;
+  color: #1e1e1e;
+
+  transition: 0.3s;
+
+  &.active{
+    border: 2px solid #efa1c3;
+    background: #efa1c3;
+    color:  #fff;
+  }
+
+  @include max1366 {
+    padding: 0px 15px;
+    height: 40px;
+  }
+
+  @include min1024 {
+    &:hover {
+      border: 2px solid #efa1c3;
+      background: #efa1c3;
+      color:  #fff;
+
+      //&.button-border_pink {
+      //  border: 2px solid #ad6ed3;
+      //  background: #ad6ed3;
+      //  color: #fff;
+      //}
+    }
+  }
+
+  //&.active {
+  //  border: 2px solid #ad6ed3;
+  //  background: #ad6ed3;
+  //  color: #fff;
+  //}
+
+  @include max600 {
+    font-size: 16px;
+    padding: 0px 24px;
+  }
+}
+
+.buttons-block {
+  display: flex;
+  align-items: center;
+  &__items {
+    a:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @include max600 {
+      a {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+.button-pink {
+  background: #efa1c3;
+  border-radius: 15px;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0px 30px;
+  color: #efeeee;
+  transition: 0.3s;
+
+  @include min1024 {
+    &:hover {
+      background: #f5eeee;
+      color: #1e1e1e;
+    }
+  }
+
+  @include max600 {
+    font-size: 16px;
+  }
+}
+
+.list-button {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+
+  &__element {
+    margin: 5px;
+  }
+
+  &__link {
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    display: inline-flex;
+    align-items: center;
+    color: #1e1e1e;
+    transition: 0.3s;
+
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 15px;
+    @include max768 {
+      padding: 10px;
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      transition: 0.3s;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      padding: 3px;
+      z-index: 1;
+      background: linear-gradient(90deg, #ad6ed3 0%, #efa1c3 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+
+    @include min1024 {
+      &:hover {
+        background: #efa1c3;
+        border-radius: 15px;
+        &:before {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &__image {
+    margin-right: 16px;
+    width: 25px;
+    height: 25px;
+    @include max1024 {
+      margin-right: 10px
+    }
+    @include max768 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__contain {
+    color: #fff;
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.btn-violet {
+  background: #ad6ed3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  color: #efeeee;
+  border: none;
+  padding: 0px 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  border: 2px solid #ad6ed3;
+  height: 42px;
+
+  @include max1366 {
+    padding: 0px 15px;
+    font-size: 18px;
+    height: 40px;
+  }
+
+  @include min1024 {
+    &:hover {
+      border: 2px solid #efa1c3;
+      background: #efa1c3;
+      color:  #EFEEEE;
+    }
+  }
+}
+
+.btn-el {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include max1024 {
+    max-width: 130px;
+  }
+
+  @include max1300 {
+    max-width: 100%;
+  }
+
+  &__item {
+    margin: 5px 0;
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__radio{
+    @include min1024 {
+      &:hover {
+        .btn-el__button{
+          background: #efa1c3;
+          color: #efeeee;
+        }
+
+      }
+    }
+  }
+
+  &__button {
+    background: #d9d9d9;
+    border-radius: 15px;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 3px 6px;
+    transition: 0.3s;
+
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    &.active {
+      background: #efa1c3;
+      color: #efeeee;
+    }
+
+    @include max1366 {
+      font-size: 14px;
+    }
+
+  }
+}
+
+.scroll-hidden{
+  overflow: hidden;
+}

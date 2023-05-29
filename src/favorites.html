@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container ">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">Избранное</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <!-- favorites -->
+              <div class="favorites">
+                <div class="favorites__fon favorites__fon_fon1">
+                  <img loading="lazy" src="img/favorites-fon1.svg" class="image" width="" height="" alt="fon">
+                </div>
+                <div class="favorites__fon favorites__fon_fon2">
+                  <img loading="lazy" src="img/favorites-fon2.svg" class="image" width="" height="" alt="fon">
+                </div>
+                <div class="favorites__fon favorites__fon_fon3">
+                  <img loading="lazy" src="img/favorites-fon3.svg" class="image" width="" height="" alt="fon">
+                </div>
+                <div class="favorites__fon favorites__fon_fon4">
+                  <img loading="lazy" src="img/favorites-fon4.svg" class="image" width="" height="" alt="fon">
+                </div>
+                <div class="favorites__fon favorites__fon_fon5">
+                  <img loading="lazy" src="img/favorites-fon5.svg" class="image" width="" height="" alt="fon">
+                </div>
+
+                <div class="favorites__inner container">
+                  <h1 class="title">Избранное</h1>
+
+                  <div class="favorites__card card-goods">
+                    <div class="card-goods">
+                      <div class="card-goods__inner card-goods__inner--w50">
+                        <div
+                          class="card-goods__header card-goods__header_padding-null"
+                        >
+                          <div class="card-goods__left-block card-goods__left-block_w75">
+                            <div class="card-goods__search card-goods__search_left">
+                              <form
+                                action="#"
+                                class="block-form__item item-form"
+                              >
+                                <div
+                                  class="item-form__wrap form-item search-form"
+                                >
+                                  <input
+                                    class="item-form__input search-form__input inputMain"
+                                    id="city"
+                                    type="text"
+                                    name="city"
+                                    placeholder=" "
+                                  />
+                                  <label
+                                    for="city"
+                                    class="item-form__label form-label form-label_search"
+                                    >Поиск</label
+                                  >
+                                  <button
+                                    type="button"
+                                    class="search-form__btn"
+                                    name="s"
+                                    value="Поиск"
+                                  >
+                                    <img
+                                      loading="lazy"
+                                      src="img/search-form.svg"
+                                      class="image"
+                                      width=""
+                                      height=""
+                                      alt="search"
+                                    />
+                                  </button>
+                                  <div class="item-form__border"></div>
+                                </div>
+                                <small
+                                  type="text"
+                                  name="city"
+                                  class="reviews-city__error-msg item-form__error"
+                                  >Заполните поле</small
+                                >
+                              </form>
+                            </div>
+                          </div>
+                          <div class="card-goods__right-block card-goods__right-block_w100">
+                            <div class="card-goods__clear clear-btn">
+                              Очистить
+                              <span>
+                                <svg class="">
+                                  <use xlink:href="img/sprite.svg#modal-close"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="card-goods__items">
+                          <li class="card-goods__item card-goods__item_justify">
+                            <div class="card-goods__el card-goods__el_margin-bottom">
+                              <div class="card-goods__product product">
+                                <div class="product__inner">
+                                  <div class="product__image">
+                                    <picture>
+                                      <source
+                                        srcset="img/product-img.webp"
+                                        type="image/webp"
+                                      />
+                                      <img
+                                        loading="lazy"
+                                        src="img/product-img.png"
+                                        class="image"
+                                        width=""
+                                        height=""
+                                        alt="img"
+                                      />
+                                    </picture>
+                                  </div>
+
+                                  <div class="product__block">
+                                    <span class="product__name"
+                                      >Мягкая игрушка “Gravity Falls” Билл
+                                      Шифр</span
+                                    >
+                                    <span class="product__description"
+                                      >Осталось 154 шт</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-goods__el card-goods__el_position">
+                              <span class="card-goods__weight">
+                                Вес: 5 г
+                              </span>
+                            </div>
+
+                            <div class="card-goods__box">
+                              <a href="#" class="card-goods__btn btn">
+                                <span>В корзину</span>
+                              </a>
+                            </div>
+
+                            <div class="card-goods__el">
+                              <div class="card-goods__total total">
+                                <div class="card-goods__head">
+                                  <span class="card-goods__sum">225 ₽</span>
+                                  <span class="total__description total__description_color">За 1 шт.</span>
+
+                                </div>
+                                <div class="total__block total__block_right">
+                                  <button class="total__delete delete-btn">Удалить</button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="card-goods__item card-goods__item_justify">
+                            <div class="card-goods__el card-goods__el_margin-bottom">
+                              <div class="card-goods__product product">
+                                <div class="product__inner">
+                                  <div class="product__image">
+                                    <picture>
+                                      <source
+                                        srcset="img/product-img.webp"
+                                        type="image/webp"
+                                      />
+                                      <img
+                                        loading="lazy"
+                                        src="img/product-img.png"
+                                        class="image"
+                                        width=""
+                                        height=""
+                                        alt="img"
+                                      />
+                                    </picture>
+                                  </div>
+
+                                  <div class="product__block">
+                                    <span class="product__name"
+                                      >Мягкая игрушка “Gravity Falls” Билл
+                                      Шифр</span
+                                    >
+                                    <span class="product__description"
+                                      >Осталось 154 шт</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-goods__el card-goods__el_position">
+                              <span class="card-goods__weight">
+                                Вес: 5 г
+                              </span>
+                            </div>
+
+                            <div class="card-goods__box">
+                              <a href="#" class="card-goods__btn btn">
+                                <span>В корзину</span>
+                              </a>
+                            </div>
+
+                            <div class="card-goods__el">
+                              <div class="card-goods__total total">
+                                <div class="card-goods__head">
+                                  <span class="card-goods__sum">225 ₽</span>
+                                  <span class="total__description total__description_color">За 1 шт.</span>
+
+                                </div>
+                                <div class="total__block total__block_right">
+                                  <button class="total__delete delete-btn">Удалить</button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="card-goods__item card-goods__item_justify">
+                            <div class="card-goods__el card-goods__el_margin-bottom">
+                              <div class="card-goods__product product">
+                                <div class="product__inner">
+                                  <div class="product__image">
+                                    <picture>
+                                      <source
+                                        srcset="img/product-img.webp"
+                                        type="image/webp"
+                                      />
+                                      <img
+                                        loading="lazy"
+                                        src="img/product-img.png"
+                                        class="image"
+                                        width=""
+                                        height=""
+                                        alt="img"
+                                      />
+                                    </picture>
+                                  </div>
+
+                                  <div class="product__block">
+                                    <span class="product__name"
+                                      >Мягкая игрушка “Gravity Falls” Билл
+                                      Шифр</span
+                                    >
+                                    <span class="product__description"
+                                      >Осталось 154 шт</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-goods__el card-goods__el_position">
+                              <span class="card-goods__weight">
+                                Вес: 5 г
+                              </span>
+                            </div>
+
+                            <div class="card-goods__box">
+                              <a href="#" class="card-goods__btn btn">
+                                <span>В корзину</span>
+                              </a>
+                            </div>
+
+                            <div class="card-goods__el">
+                              <div class="card-goods__total total">
+                                <div class="card-goods__head">
+                                  <span class="card-goods__sum">225 ₽</span>
+                                  <span class="total__description total__description_color">За 1 шт.</span>
+
+                                </div>
+                                <div class="total__block total__block_right">
+                                  <button class="total__delete delete-btn">Удалить</button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slider-baners recommendations -->
+
+                  <div
+                    class="favorites__slider swiper m-top card-main slider-recommendations"
+                  >
+                    <div class="card-main__navigation">
+                      <div class="card-main__item">
+                        <div class="card-main__title">Рекомендации для вас</div>
+                        <a href="#" class="card-main__button">
+                          <span>Смотреть все</span>
+                          <svg class="">
+                            <use xlink:href="img/sprite.svg#arrow-line"></use>
+                          </svg>
+                        </a>
+                      </div>
+
+                      <div class="card-main__item">
+                        <div
+                          class="card-main__next card-main__btn slider-recommendations__next btn-slider swiper-button-next"
+                        >
+                          <svg class="card-main__arrow">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="slider-bg-pagination-fraction slider-bg-pagination-fraction-recommendations"
+                        ></div>
+                        <div
+                          class="card-main__prev card-main__btn slider-recommendations__prev btn-slider swiper-button-prev"
+                        >
+                          <svg class="card-main__arrow">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-wrapper card-main__wrapper slider-hits__wrapper"
+                    >
+                      @include('partials/_main-cards.html')
+                    </div>
+                  </div>
+                  <!-- Slider-baners recommendations-->
+                </div>
+
+              </div>
+              <!--End favorites -->
+
+              <div class="container">
+                @include('partials/_questions.html')
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">О компании</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <div class="block-wrapper-img">
+                <section class="text-content text-content_bottom-margin">
+                  <h2 class="text-content__h1 title">О компании</h2>
+
+                  <div class="block-wrapper-img__box">
+                    <div class="block-wrapper-img__text">
+                      <strong>Plushstory — сеть магазинов от мягких игрушек до современных гаджетов</strong>
+                      <p>Работаем с 2016 года и не собираемся останавливаться!</p>
+                      <p>
+                        Наша команда состоит только из настоящих знатоков своего дела.
+                        Вы всегда сможете обратиться к нам, чтобы получить совет,
+                        рекомендацию, да и просто, чтобы поднять настроение.
+                      </p>
+                    </div>
+                    <div class="block-wrapper-img__img">
+                      <img loading="lazy" src="img/company-icon1.svg" class="image" width="" height="" alt="icon">
+                    </div>
+                  </div>
+
+                  <p>
+                    Мы ответственно подходим к выбору поставщиков, поэтому все
+                    категории «разношерстной» продукции заполнены
+                    высококачественными вещами повседневного пользования. Детям —
+                    игрушки, а их родителям, тетям и дядям, — начиная от крутых
+                    гаджетов до запчастей электротранспорта. Мы позаботились обо
+                    всех. Каждый посетитель магазина найдет для себя то, что ему
+                    нужно. Даже если он решил зайти к нам просто из любопытства.
+                  </p>
+                </section>
+
+
+              </div>
+
+              <div class="block-wrapper-img__box">
+                <div class="block-wrapper-img">
+                  <section class="text-content text-content_bottom-margin">
+                    <div class="text-content__h1 title">Наша миссия</div>
+
+
+                    <p>Сделать так, чтобы в повседневной рутине, наш магазин оставался, тем самым островком счастье, где каждый каждый может найти что-то свое.</p>
+
+                  </section>
+
+                    <section class="text-content text-content_bottom-margin text-content_last">
+                      <div class="text-content__h1 title">Наша цель</div>
+
+
+                      <p>Предоставить вам максимально разнообразный ассортимент товаров, поднять ваше настроение, порадовать близких вам людей и ещё много всего!</p>
+
+                      <a href="#" class="text-content__btn btn"><span>Перейти в каталог</span></a>
+
+                  </section>
+                </div>
+
+                <div class="block-wrapper-img__img">
+                  <img loading="lazy" src="img/company-icon2.svg" class="image" width="" height="" alt="icon">
+                </div>
+              </div>
+
+
+              @include('partials/_questions.html')
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html')
+      @include('partials/modal.html')
+    </div>
+  </body>
+</html>

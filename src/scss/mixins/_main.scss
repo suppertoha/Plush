@@ -1,0 +1,41 @@
+@mixin bb {
+  position: relative;
+    &:before{
+    content: '' ;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: var(--white);
+  }
+}
+
+@mixin icons {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+
+  @include min1024 {
+    &:hover{
+      border: 2px solid transparent;
+    }
+  }
+
+  svg{
+    fill: var(--white);
+  }
+
+  a{
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+

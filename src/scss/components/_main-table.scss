@@ -1,0 +1,193 @@
+.main-wrapp-tabble {
+}
+
+.main-table {
+  position: relative;
+  border-radius: 15px;
+  margin-top: 64px;
+
+  @include max1024 {
+    margin-top: 40px;
+  }
+
+  @include max600 {
+    margin-top: 30px;
+  }
+
+  &__body {
+    @include max768 {
+      overflow-x: scroll;
+      display: grid;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 3px;
+    z-index: -1;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ad6ed3),
+      to(#efa1c3)
+    );
+    background: -o-linear-gradient(left, #ad6ed3 0%, #efa1c3 100%);
+    background: linear-gradient(90deg, #ad6ed3 0%, #efa1c3 100%);
+    -webkit-mask: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0, #fff)
+        )
+        content-box,
+      -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+
+  &__item {
+    color: #1e1e1e;
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+
+    span {
+      display: block;
+      padding: 0 20px;
+    }
+
+    font-family: "Gotham Pro", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+
+    position: relative;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      padding: 2px;
+      z-index: -1;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#ad6ed3),
+        to(#efa1c3)
+      );
+      background: -o-linear-gradient(left, #ad6ed3 0%, #efa1c3 100%);
+      background: linear-gradient(90deg, #ad6ed3 0%, #efa1c3 100%);
+      -webkit-mask: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #fff)
+          )
+          content-box,
+        -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+
+    span {
+      &:first-child {
+        width: 21%;
+        margin-right: 30px;
+      }
+      &:nth-child(2) {
+        font-weight: 400;
+        width: 43%;
+      }
+
+      &:nth-child(3) {
+        width: 15%;
+        font-weight: 400;
+      }
+
+      @include max1366 {
+        padding: 0 20px;
+        font-size: 18px;
+      }
+
+      @include max1024 {
+        font-size: 16px;
+      }
+
+
+
+      @include max768 {
+        padding: 0 10px;
+        &:first-child {
+          width: 27%;
+          margin-right: 0;
+        }
+        &:nth-child(2) {
+          width: 40%;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &_head {
+      color: rgba(30, 30, 30, 0.5);
+
+      &::before {
+        display: none;
+      }
+
+      span {
+        &:nth-child(2) {
+          font-weight: 700;
+        }
+
+        &:nth-child(3) {
+          font-weight: 700;
+        }
+      }
+    }
+
+    @include max1366 {
+      padding: 20px;
+    }
+
+    @include max1024 {
+      padding: 15px 0;
+    }
+
+    @include max768 {
+      min-width: 700px;
+      padding: 15px 10px;
+    }
+
+  }
+
+}

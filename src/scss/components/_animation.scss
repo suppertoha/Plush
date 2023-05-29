@@ -1,0 +1,60 @@
+@keyframes dropdown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 1s;
+  }
+}
+
+//.header__item--animation,
+//.body-catalog__item {
+//  animation: dropdown 1s ease-in-out;
+//}
+
+.body-catalog__item{
+  transform: translateY(10px);
+  opacity: 0;
+}
+.search__catalog{
+  &:hover{
+    .body-catalog__item{
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+.header__accordion .header__item,
+.catalog-search .body-catalog__item {
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      transition: 0.3s #{$i * 80}ms;
+    }
+  }
+}
+
+
+
+//@for $i from 1 to 400 {
+//  $side: $i;
+//  .c-manager.frame_#{$side} {
+//    .img_#{$side} {
+//      opacity: 1;
+//      @media (max-width: 1023px) {
+//      }
+//    }
+//  }
+//}
+
+//@keyframes moveLetters {
+//  0% {
+//    transform: translateX(0);
+//  }
+//  100% {
+//    transform: translateX(-5px); /* Измените значение сдвига по вашему желанию */
+//  }
+//}

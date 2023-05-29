@@ -1,0 +1,888 @@
+.swiper-slide {
+  //height: auto;
+}
+
+.card-main {
+  &__body {
+    height: 100%;
+  }
+
+  &__card{
+    height: 100%;
+  }
+
+  &__card {
+    .price-card {
+      transition: max-height 6s ease-out;
+    }
+    @include min1024 {
+      &:hover {
+        .card-main__bottom {
+          bottom: -60px;
+        }
+      }
+    }
+
+
+  }
+
+  &__wrap-block{
+    position: relative;
+    z-index: 3;
+    background: #efeeee;
+
+    padding-bottom: 25px;
+    @include max768 {
+      padding-bottom: 15px;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 8px;
+      padding-bottom: 0;
+    }
+  }
+
+  &_margin {
+    margin-top: 0;
+  }
+
+  &__stepper {
+    &.stepper {
+      @include max1024 {
+        max-width: 180px;
+
+        &__field {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include max1366 {
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    @include max600 {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:nth-child(2) {
+      @include max600 {
+        margin-top: 10px;
+      }
+    }
+
+    @include max600 {
+      flex-wrap: wrap;
+    }
+
+    &_buttons {
+      flex-shrink: 0;
+      min-width: 295px;
+
+      @include max1024 {
+        min-width: 200px;
+      }
+    }
+
+    &:nth-child(2) {
+      align-items: center;
+      max-width: 260px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 50px;
+      position: relative;
+
+      @include max1366 {
+        max-width: 220px;
+      }
+
+      @include max1024 {
+        max-width: 200px;
+        height: 50px;
+      }
+
+      @include max768 {
+        max-width: 140px;
+        margin-left: auto;
+      }
+    }
+
+    .swiper-button-disabled {
+      //background: #efa1c3 !important;
+      opacity: 1 !important;
+    }
+
+    .swiper-pagination-current {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1;
+      align-self: center;
+      color: #1e1e1e;
+      user-select: none;
+
+      @include max1366 {
+        font-size: 24px;
+      }
+
+      @include max768 {
+        font-size: 20px;
+      }
+    }
+
+    .btn-slider {
+      top: 50%;
+      transform: translate(0%, -50%);
+      margin-top: 0;
+
+      &_white {
+        background: #f5eeee;
+
+        @include min1024 {
+          &:hover {
+            background: #efa1c3;
+
+            .slider-card__arrow {
+              fill: #f5eeee;
+            }
+          }
+        }
+
+        .slider-card__arrow {
+          fill: #1e1e1e;
+        }
+      }
+    }
+
+    .swiper-pagination-total {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      align-self: center;
+
+      color: #1e1e1e;
+      opacity: 0.5;
+      height: 18px;
+      user-select: none;
+      margin-top: 4px;
+
+      @include max1366 {
+        font-size: 14px;
+      }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      display: flex;
+      justify-content: center;
+      height: 30px;
+      width: 60px;
+
+      @include max600 {
+        height: 30px;
+      }
+    }
+
+    .rzdClass {
+      display: block;
+      flex-shrink: 0;
+      width: 8px;
+      height: 18px;
+      margin: 0 4px;
+      position: relative;
+      align-self: center;
+      transform: rotate(-10deg);
+      //top: 10px;
+      &:before {
+        content: "/";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        font-size: 18px;
+      }
+
+      @include max1366 {
+        width: 8px;
+        height: 14px;
+        margin: 0 2px;
+        &:before {
+          font-size: 14px;
+        }
+      }
+
+      @include max768 {
+        width: 8px;
+        height: 12px;
+        margin: 0 2px;
+        &:before {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    color: #ad6ed3;
+    margin-right: 40px;
+
+    @include max1366 {
+      font-size: 30px;
+      margin-right: 20px;
+    }
+
+    @include max768 {
+      font-size: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &__button {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    flex-shrink: 0;
+    margin-right: 20px;
+    transition: 0.3s;
+    flex-shrink: 0;
+    width: auto;
+
+    @include min1024 {
+      &:hover {
+        color: #1e1e1e;
+
+        svg {
+          fill: #1e1e1e;
+        }
+      }
+    }
+
+    color: rgba(30, 30, 30, 0.5);
+    svg {
+      display: flex;
+      fill: #626262;
+      height: 12px;
+      width: 24px;
+      margin-left: 15px;
+      transition: 0.3s;
+      flex-shrink: 0;
+    }
+
+    @include max1366 {
+      font-size: 14px;
+      svg {
+        width: 18px;
+        margin-left: 10px;
+      }
+    }
+
+    @include max1024 {
+      font-size: 18px;
+    }
+
+    @include max768 {
+      font-size: 14px;
+      margin-top: 3px;
+      svg {
+        width: 22px;
+      }
+    }
+
+    &_card {
+      background: linear-gradient(79.28deg, #ad6ed3 25.33%, #efa1c3 82.39%);
+      border: none;
+      width: 100%;
+      padding: 18px 10px;
+      font-family: "Gotham Pro";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      color: #ffffff;
+      cursor: pointer;
+
+      span {
+        position: relative;
+        z-index: 10;
+      }
+
+      position: relative;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: transparent;
+        transition: 0.3s;
+      }
+      transition: 0.3s;
+
+      @include min1024 {
+        &:hover {
+          &:before {
+            background: #efa1c3;
+          }
+        }
+      }
+
+      @include max768 {
+        padding: 15px 10px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__prev {
+    left: 0px;
+
+    .card-main__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 28px;
+  }
+
+  &__name {
+    position: relative;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    flex-grow: 1;
+    color: #000000;
+    padding: 0 15px;
+    text-align: center;
+
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+
+    @include max1366 {
+      font-size: 16px;
+      margin: 0 auto 20px;
+    }
+
+    @include max768 {
+      font-size: 14px;
+    }
+
+    @include max600 {
+      margin: 0 auto 5px;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 0 3px;
+    }
+  }
+
+  &__price{
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__price-top{
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+
+    @media screen and (max-width: 500px) {
+      font-size: 20px;
+    }
+  }
+
+
+  &__inner {
+    background: #efeeee;
+    border-radius: 30px ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 55px;
+    height: 100%;
+
+    @include max1366 {
+      border-radius: 15px ;
+    }
+
+    @include max1300 {
+      padding-bottom: 120px;
+    }
+
+    @include max600 {
+      padding-bottom: 105px;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__bottom{
+    transition: 0.3s;
+    background: #efeeee;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  &__block {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    width: 100%; /* Ширина блока, в котором содержится изображение */
+    height: 0; /* Начальная высота блока */
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    background-image: url(../img/img-background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: calc(50% + 20px);
+    z-index: 1;
+    @include max768 {
+      background-position-y: calc(50% + 15px);
+    }
+
+    @include max768 {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding-bottom: 80%;
+    }
+
+  }
+
+  &__head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+  }
+
+  &__info {
+    width: 50%;
+    display: block;
+    padding: 15px 10px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s;
+    flex-grow: 1;
+
+    &_left {
+      background: #efa1c3;
+
+      @include min1024 {
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+
+    &_right {
+      background: #ad6ed3;
+      @include min1024 {
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+
+    @include max768 {
+      padding: 15px 30px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 10px 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__block-btn{
+    position: absolute;
+    display: flex;
+    right: 15px;
+    bottom: 15px;
+
+    @media screen and (max-width: 500px) {
+      right: 5px;
+      bottom: 5px;
+    }
+
+  }
+
+  &__favorites {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin: 3px;
+    cursor: pointer;
+    border: none;
+
+    &.active {
+      span {
+        position: relative;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          background: url(../img/heard.svg) no-repeat;
+        }
+      }
+    }
+
+    span {
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    @include min1024 {
+      &:hover {
+        span {
+          position: relative;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition: 0.3s;
+            background: url(../img/heard.svg) no-repeat;
+            background-size: 24px 24px;
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background: #ffffff;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    @include max768 {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    fill: #efa1c3;
+
+    @include min1024 {
+      &:hover {
+        position: relative;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          background: url(../img/heard.svg);
+        }
+      }
+    }
+
+    @include max768 {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__img {
+    //display: flex;
+    //align-items: flex-start;
+    img {
+      width: 100%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Изображение заполняет блок, сохраняя пропорции */
+    }
+  }
+
+  &__wrapper {
+
+  }
+}
+
+.m-top {
+  margin-top: 100px;
+
+  @include max1366 {
+    margin-top: 70px;
+  }
+
+  @include max1024 {
+    margin-top: 40px;
+  }
+
+  @include max600 {
+    margin-top: 25px;
+  }
+}
+
+.stepper {
+  max-width: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include max1366 {
+    max-width: 180px;
+  }
+
+  @include max1024 {
+    max-width: 140px;
+  }
+
+  @include max600 {
+    max-width: 100%;
+  }
+
+  &__field {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    color: #1e1e1e;
+
+    @include max1024 {
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    border: none;
+    background: transparent;
+    border: none;
+    width: 10px;
+    height: 100%;
+    outline: none;
+    font-weight: 500;
+    min-width: 1ex;
+  }
+
+  &__svg {
+    width: 10px;
+    height: 10px;
+    fill: #efeeee;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: #1e1e1e;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    @include min1024 {
+      &:hover {
+        background: #efa1c3;
+      }
+    }
+
+    @include max768 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.price-card {
+  border-top: 1px solid rgba(30, 30, 30, 0.5);
+
+  @include min1024 {
+    //opacity: 0;
+    //visibility: hidden;
+    transition: max-height 0.6s ease-out;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    max-height: 60px;
+
+    &:not(:first-child) {
+      border-left: 1px solid rgba(30, 30, 30, 0.5);
+    }
+
+    @include max1366 {
+      padding: 10px 0;
+    }
+
+    @include max600 {
+      padding: 10px 0;
+    }
+  }
+
+  &__sum {
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: #1e1e1e;
+  }
+
+  &__quantity {
+    margin-top: 10px;
+    background: #efeeee;
+    border-radius: 0px 0px 35px 35px;
+
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 13px;
+    color: rgba(30, 30, 30, 0.5);
+    @include max1366 {
+      font-size: 12px;
+    }
+    @include max768 {
+      margin-top: 10px;
+    }
+  }
+}
+
+.swiper {
+  overflow: inherit;
+  overflow-X: clip;
+
+  &.card-main{
+    margin-bottom: 80px;
+
+    @include max1024 {
+      margin-bottom: 100px;
+    }
+
+    @include max1300 {
+      margin-bottom: 0;
+    }
+  }
+}

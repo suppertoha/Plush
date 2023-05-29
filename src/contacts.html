@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">Контакты</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <div class="contacts container">
+                <h1 class="contacts__title title">Контакты</h1>
+
+                <div class="contacts__inner">
+                  <div class="contacts__map map" >
+                    <div class="map__block" id="map"></div>
+                  </div>
+                  <div class="contacts__block block-contacts">
+                    <div class="block-contacts__items">
+                      <div class="block-contacts__title title-h3">
+                        Связаться с нами
+                      </div>
+
+                      <a href="tel:+79962828524" class="block-contacts__item">
+                        <svg class="block-contacts__icon">
+                          <use xlink:href="img/sprite.svg#telephone"></use>
+                        </svg>
+                        +7&nbsp;996&nbsp;282-85-24</a
+                      >
+
+                      <a
+                        href="mailto:info@plushstory.ru"
+                        class="block-contacts__item"
+                      >
+                        <svg class="block-contacts__icon">
+                          <use xlink:href="img/sprite.svg#mail"></use>
+                        </svg>
+                        info@plushstory.ru</a
+                      >
+                    </div>
+
+                    <div class="block-contacts__items">
+                      <div class="block-contacts__title title-h3">Адрес</div>
+
+                      <div class="block-contacts__item">
+                        <svg class="block-contacts__icon">
+                          <use xlink:href="img/sprite.svg#location"></use>
+                        </svg>
+                        г. Москва, Алтуфьевское шоссе, д. 37, стр. 1 (бизнес центр Центр Торговли)</div
+                      >
+                    </div>
+
+                    <div class="block-contacts__items">
+                      <div class="block-contacts__title title-h3">
+                        График работы
+                      </div>
+
+                      <div class="block-contacts__item">
+                        <svg class="block-contacts__icon">
+                          <use xlink:href="img/sprite.svg#time"></use>
+                        </svg>
+                        Понедельник- Пятница: 10:00 – 19:00</div
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contacts contacts_bottom">
+                <div class="contacts__body">
+                  <div class="contacts__bg bg-left">
+                    <div class="contacts__bg--first contacts__img"></div>
+                    <div class="contacts__bg--second contacts__img"></div>
+                  </div>
+
+                  <div class="contacts__bg bg-right">
+                    <div class="contacts__bg--first contacts__img"></div>
+                    <div class="contacts__bg--second contacts__img"></div>
+                  </div>
+
+                  <form class="contacts__form form-contacts">
+                    <div class="form-contacts__title title-h3 title-h3_text-center">
+                      Подпишитесь на рассылку
+                    </div>
+
+                    <div class="form-contacts__block block-form">
+                      <div
+                        class="block-form__item item-form item-form_margin-bottom"
+                      >
+                        <label
+                          for="name"
+                          class="item-form__label item-form__label_text-center"
+                          >ФИО</label
+                        >
+                        <div class="item-form__wrap">
+                          <input
+                            class="item-form__input"
+                            id="name"
+                            type="name"
+                            name="name"
+                          />
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small
+
+                          class="reviews-name__error-msg item-form__error"
+                          >Заполните поле</small
+                        >
+                      </div>
+
+                      <div
+                        class="block-form__item item-form item-form_margin-bottom"
+                      >
+                        <label
+                          for="email"
+                          class="item-form__label item-form__label_text-center"
+                          >Email</label
+                        >
+                        <div class="item-form__wrap">
+                          <input
+                            class="item-form__input"
+                            id="email"
+                            type="email"
+                            name="email"
+                          />
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small
+
+                          class="reviews-email__error-msg item-form__error"
+                          >Заполните поле</small
+                        >
+                      </div>
+
+                      <div class="block-form__item item-form">
+                        <label
+                          for="tel"
+                          class="item-form__label item-form__label_text-center"
+                          >Номер телефона</label
+                        >
+                        <div class="item-form__wrap">
+                          <input
+                            class="item-form__input phone-mask"
+                            id="tel"
+                            type="tel"
+                            name="tel"
+                          />
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small
+
+                          class="reviews-tel__error-msg item-form__error"
+                          >Заполните поле</small
+                        >
+                      </div>
+
+                    </div>
+
+                    <div class="form-contacts__button btn">
+                      <span>Отправить</span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="container">
+                @include('partials/_questions.html')
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<cd659648-e743-4580-9fbe-f3c5d5602eeb>"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map(
+            "map",
+            {
+              //center: [55.751574, 37.573856],
+              center: [55.86770345439645, 37.58008794047541],
+              zoom: 16.4,
+            },
+            {
+              searchControlProvider: "yandex#search",
+            }
+          ),
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+          myPlacemark = new ymaps.Placemark(
+            myMap.getCenter(),
+            {
+              hintContent: "PlushStory",
+              balloonContent: "PlushStory",
+            },
+            {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: "default#image",
+              // Своё изображение иконки метки.
+              iconImageHref: "img/map.svg",
+              // Размеры метки.
+              iconImageSize: [95, 126],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-30, -60],
+            }
+          ),
+          myPlacemarkWithContent = new ymaps.Placemark(
+            [55.661574, 37.573856],
+            {
+              hintContent: "Собственный значок метки с контентом",
+              balloonContent: "А эта — новогодняя",
+              iconContent: "12",
+            },
+            {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: "default#imageWithContent",
+              // Своё изображение иконки метки.
+              iconImageHref: "images/ball.png",
+              // Размеры метки.
+              iconImageSize: [48, 48],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-24, -24],
+              // Смещение слоя с содержимым относительно слоя с картинкой.
+              iconContentOffset: [15, 15],
+              // Макет содержимого.
+              iconContentLayout: MyIconContentLayout,
+            }
+          );
+
+        myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
+      });
+    </script>
+
+
+  </body>
+</html>

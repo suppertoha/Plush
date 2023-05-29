@@ -1,0 +1,46 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/_modal";
+@import "./components/_show-text";
+@import "./components/_animation";
+@import "./components/_btn";
+@import "./components/_accordion";
+@import "./components/_header";
+@import "./components/_slider";
+@import "./components/_search";
+@import "./components/_main-layout";
+@import "./components/_footer";
+@import "./components/_card-slider";
+@import "./components/_advantages";
+@import "./components/_text-content";
+@import "./components/_main-table";
+@import "./components/_navigation";
+@import "./components/_questions";
+@import "./components/_dropdown";
+@import "./components/_tabs";
+@import "./components/_registration";
+@import "./components/_error";
+@import "./components/_reviews";
+@import "./components/_rating";
+@import "./components/_card-block";
+@import "./components/_pagination";
+@import "./components/_contacts";
+@import "./components/_item-form";
+@import "./components/_block-contacts";
+@import "./components/_personal-area";
+@import "./components/_card-goods";
+@import "./components/_search-form";
+@import "./components/_card-product";
+@import "./components/_main-block";
+@import "./components/_checkout";
+@import "./components/_show-more-menu";
+@import "./components/_scrollable";
+@import "./components/_mini-slider";
+
+
+

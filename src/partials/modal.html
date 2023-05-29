@@ -1,0 +1,197 @@
+<div class="graph-modal">
+  <!-- modal 1 -->
+  <div
+    class="graph-modal__container"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="cart-about-1"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close"
+      aria-label="Закрыть модальное окно"
+    >
+  <svg class="modal-close">
+    <use xlink:href="img/sprite.svg#modal-close"></use>
+  </svg>
+  </button>
+    <div class="graph-modal__content content-modal">
+      <div class="content-modal__inner">
+
+        <div class="tabs">
+          <div class="tabs-buttons">
+            <button class="tabs-button active" data-tab="tab1">Вход</button>
+            <button class="tabs-button" data-tab="tab2">Регистрация</button>
+          </div>
+          <div class="tabs-contents">
+            <div class="tab-content active" data-tab="tab1">
+              <form class="form main-form">
+                <div class="input-map__address main-form main-form__row">
+                  <div class="form-item main-form__field">
+                    <div class="block-form__item item-form">
+
+                      <div class="item-form__wrap form-item">
+                        <input
+                        class="item-form__input inputMain"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder=" "
+                      />
+                        <label
+                        for="email"
+                        class="item-form__label form-label item-form__label_text-center"
+                        >E-mail</label
+                      >
+                        <div class="item-form__border"></div>
+                      </div>
+                      <small
+
+                        class="reviews-email__error-msg item-form__error"
+                        >Заполните поле</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-item main-form__field">
+                    <div class="block-form__item item-form">
+
+                      <div class="item-form__wrap form-item">
+                        <input
+                        class="item-form__input inputMain"
+                        id="password1"
+                        type="password"
+                        name="password1"
+                        placeholder=" "
+                      />
+                        <label
+                        for="password1"
+                        class="item-form__label form-label item-form__label_text-center"
+                        >Пароль</label
+                      >
+                        <div class="item-form__border"></div>
+                      </div>
+                      <button class="main-form__err">Забыли пароль?</button>
+                      <small
+
+                        class="reviews-password__error-msg item-form__error"
+                        >Заполните поле</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="main-form__check check">
+                    <label class="check">
+                      <input type="checkbox" name="toggle" checked class="check__input">
+                      <span></span>
+                      <strong class="check__name">Запомнить меня</strong>
+                    </label>
+                  </div>
+
+                  <button class="main-form__button">Войти</button>
+                </div>
+              </form>
+
+            </div>
+            <div class="tab-content" data-tab="tab2">
+              <form class="form main-form">
+                <div class="main-form__row">
+                  <div class="block-form__item item-form form-item main-form__field">
+                    <div class="item-form__wrap form-item">
+                      <input class="item-form__input inputMain" id="name" type="text" name="name" placeholder=" ">
+                      <label for="name" class="item-form__label form-label item-form__label_text-center">ФИО</label>
+                      <div class="item-form__border"></div>
+                    </div>
+                    <small class="reviews-name__error-msg item-form__error">Заполните поле</small>
+                  </div>
+
+                  <div class="block-form__item item-formform-item main-form__field">
+
+                    <div class="item-form__wrap form-item">
+                      <input class="item-form__input inputMain phone-mask" type="tel" name="tel" placeholder=" ">
+                      <label for="tel" class="item-form__label form-label item-form__label_text-center">Телефон</label>
+                      <div class="item-form__border"></div>
+                    </div>
+                    <small class="reviews-tel__error-msg item-form__error">Заполните поле</small>
+                  </div>
+
+                  <div class="block-form__item item-formform-item main-form__field">
+
+                    <div class="item-form__wrap form-item">
+                      <input class="item-form__input inputMain" id="email2" type="email" name="email" placeholder=" ">
+                      <label for="email2" class="item-form__label form-label item-form__label_text-center">E-mail</label>
+                      <div class="item-form__border"></div>
+                    </div>
+                    <small class="reviews-email__error-msg item-form__error">Заполните поле</small>
+                  </div>
+
+                  <div class="form-item main-form__field">
+                    <div class="block-form__item item-form">
+
+                      <div class="item-form__wrap form-item">
+                        <input class="item-form__input inputMain" id="password2" type="password" name="password2" placeholder=" " />
+
+                        <label
+                        for="password2"
+                        class="item-form__label form-label item-form__label_text-center"
+                        >Пароль</label
+                      >
+                        <div class="item-form__border"></div>
+                      </div>
+                      <small
+
+                        class="reviews-password__error-msg item-form__error"
+                        >Заполните поле</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-item main-form__field">
+                    <div class="block-form__item item-form">
+
+                      <div class="item-form__wrap form-item">
+                        <input
+                        class="item-form__input inputMain"
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder=" "
+                      />
+                        <label
+                        for="password"
+                        class="item-form__label form-label item-form__label_text-center"
+                        >Повторите пароль</label
+                      >
+                        <div class="item-form__border"></div>
+                      </div>
+                      <small
+
+                        class="reviews-password__error-msg item-form__error"
+                        >Заполните поле</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="main-form__check check">
+                    <label class="check">
+                      <input type="checkbox" name="toggle" checked class="check__input">
+                      <span></span>
+                      <strong class="check__name">Согласие на обработку данных</strong>
+                    </label>
+                  </div>
+
+                  <button class="main-form__button">Зарегистрироваться</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--end modal 1 -->
+
+
+  <!--end trainer -->
+</div>

@@ -1,0 +1,155 @@
+.main-block {
+  &__wrapper {
+    display: flex;
+
+    @include max1300 {
+      display: block;
+    }
+  }
+
+  &__body{
+    flex-grow: 1;
+    margin-right: 30px;
+    @include max1300 {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__card {
+    //width: 100%;
+  }
+
+  &__description {
+    align-self: flex-start;
+    position: sticky;
+    min-width: 350px;
+    top: 0px;
+    right: 0px;
+
+    @include max1024 {
+      min-width: 320px;
+    }
+  }
+}
+
+.description-card {
+  &__inner {
+    max-width: 360px;
+    width: 100%;
+    padding: 20px;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.25));
+    background: #f5eeee;
+    border-radius: 15px;
+
+    @include max1300 {
+      max-width: 100%;
+    }
+
+    @include max600 {
+      padding: 30px 20px;
+    }
+  }
+
+  &__header {
+    border-bottom: 2px solid rgba(30, 30, 30, 0.5);
+  }
+
+  &__name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    @include max600 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include max600 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__el {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #1e1e1e;
+    &:first-child{
+      margin-right: 10px;
+    }
+
+    &:last-child{
+      width: 30%;
+      flex-grow: 0;
+      text-align: right;
+    }
+
+
+    @include max600 {
+      font-size: 14px;
+    }
+  }
+
+  &__footer {
+    margin-top: 30px;
+
+    @include max600 {
+      margin-top: 20px;
+    }
+  }
+
+  &__total {
+    margin-bottom: 25px;
+
+    @include max1024 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+
+  &__check {
+    margin-bottom: 40px;
+    @include max1024 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.info {
+  display: inline-block;
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgba(30, 30, 30, 0.5);
+
+  @include max1024 {
+    font-size: 16px;
+  }
+
+  @include max600 {
+    font-size: 14px;
+  }
+}

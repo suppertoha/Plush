@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container container-main">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link"
+                      >Личные кабинет</a
+                    >
+                  </li>
+                  <li class="navigation__item">Адрес доставки</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <section class="personal-area">
+                <div class="personal-area__inner container container-main">
+                  <div class="personal-area__nav">
+                    <ul class="personal-area__buttons buttons-el">
+                      <li class="buttons-el__item">
+                        <a href="#" class="buttons-el__button">
+                          Личные данные
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a href="#" class="buttons-el__button active">
+                          Адрес доставки
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          История заказов
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Отследить заказ
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Отследить заказ
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Корзина
+                          <svg class="arrow-mini">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-catalog"
+                            ></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+
+
+                  </div>
+
+                  <div class="personal-area__body">
+                    <div class="personal-area__top">
+                      <div class="personal-area__title title">
+                        Адрес доставки
+                      </div>
+                    </div>
+                    <form class="form-delivery">
+                      <div class="form-delivery__block block-form block-form_grid">
+                        <div class="block-form__item item-form w33">
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              id="city"
+                              type="text"
+                              name="city"
+                              placeholder=" "
+                            />
+                            <label
+                              for="city"
+                              class="item-form__label form-label item-form__label_text-center"
+                              >Город</label
+                            >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="city"
+                            class="reviews-city__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w67">
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              id="street"
+                              type="text"
+                              name="street"
+                              placeholder=" "
+                            />
+                            <label
+                              for="street"
+                              class="item-form__label form-label item-form__label_text-center"
+                              >Улица</label
+                            >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="street"
+                            class="reviews-street__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w33">
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              id="house"
+                              type="text"
+                              name="house"
+                              placeholder=" "
+                            />
+                            <label
+                              for="house"
+                              class="item-form__label form-label item-form__label_text-center"
+                              >Дом</label
+                            >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="house"
+                            class="reviews-house__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w33">
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              type="text"
+                              name="apartment"
+                              placeholder=" "
+                            />
+                            <label
+                              for="apartment"
+                              class="item-form__label form-label item-form__label_text-center"
+                              >Квартира</label
+                            >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="apartment"
+                            class="reviews-apartment__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w33">
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain "
+                              id="index"
+                              type="text"
+                              name="index"
+                              placeholder=" "
+                            />
+                            <label
+                              for="Email"
+                              class="item-form__label form-label item-form__label_text-center"
+                              >Индекс</label
+                            >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="index"
+                            class="reviews-index__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+                      </div>
+
+                      <div class="form-contacts__button btn">
+                        <span>Сохранить изменения</span>
+                      </div>
+                    </form>
+
+                    <div class="fon-bg-big fon-bg-big_right">
+                      <img
+                        loading="lazy"
+                        src="img/personal-icon2.svg"
+                        class="image"
+                        width=""
+                        height=""
+                        alt="fon-icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+  </body>
+</html>

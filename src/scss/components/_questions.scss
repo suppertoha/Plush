@@ -1,0 +1,141 @@
+.questions {
+  margin-top: 100px;
+
+  @include max1366 {
+    margin-top: 70px;
+  }
+
+  @include max1024 {
+    margin-top: 40px;
+  }
+
+  @include max600 {
+    margin-top: 30px;
+  }
+}
+
+.dropdown-questions {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 2;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    padding: 15px 0px;
+    font-weight: 700;
+
+    cursor: pointer;
+    position: relative;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #000000;
+
+    @include max1366 {
+      font-size: 22px;
+      padding: 15px 0px;
+    }
+
+    @include max1024 {
+      font-size: 16px;
+      padding: 10px 0px;
+    }
+  }
+
+  &__header.open &__icon {
+    transform: rotate(-90deg);
+  }
+
+  &__wrap {
+    border-top: 3px solid #1e1e1e;
+    &:last-child {
+      border-bottom: 3px solid #1e1e1e;
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    fill: #ad6ed3;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    transform: rotate(90deg);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #1e1e1e;
+    max-height: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.6s ease-out;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    @include max1366 {
+      font-size: 18px;
+    }
+
+    @include max1024 {
+      font-size: 16px;
+    }
+
+    @include max600 {
+      font-size: 14px;
+    }
+  }
+
+  &__content.open {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    max-height: inherit;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+
+    @include max1024 {
+      padding-bottom: 20px;
+    }
+
+    @include max600 {
+      padding: 15px 0;
+    }
+  }
+
+  .accordion-start-js svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    margin-left: 5px;
+    align-self: flex-start;
+    transform: rotate(90deg);
+
+    @include max1024 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

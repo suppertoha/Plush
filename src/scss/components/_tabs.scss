@@ -1,0 +1,107 @@
+.tabs-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 40px;
+
+  @include max1024 {
+    margin-bottom: 30px;
+  }
+
+  @include max600 {
+    margin-bottom: 15px;
+  }
+}
+
+.tabs-button {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.tabs-button.active {
+  background-color: #e8e8e8;
+  border-bottom: none;
+}
+
+.tabs-contents .tab-content {
+  transition: 0.3s;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  box-sizing: content-box;
+}
+
+.tabs-contents .tab-content.active {
+  max-height: inherit;
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.tabs-button {
+  background: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  color: #1E1E1E;
+  padding: 0;
+  margin: 0;
+  border: none;
+  transition: 0.3s;
+  @include min1024 {
+    &:hover{
+      color: #EFA1C3;
+    }
+  }
+
+  @include max1024 {
+    font-size: 24px;
+  }
+
+  @include max600 {
+    font-size: 18px;
+  }
+}
+.tabs-button.active {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  color: #ad6ed3;
+  background-color: transparent;
+  margin-right: 40px;
+
+  @include max1024 {
+    font-size: 40px;
+  }
+
+  @include max600 {
+    font-size: 22px;
+    margin-right: 20px;
+  }
+}
+.tabs-contents {
+  .inputMain{
+    background: #EFEEEE;
+  }
+}
+.tab-content {
+}

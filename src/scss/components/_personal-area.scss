@@ -1,0 +1,295 @@
+.personal-area {
+  &__inner {
+    display: flex;
+    position: relative;
+
+    @include max1300 {
+      flex-direction: column;
+    }
+  }
+
+  &__nav {
+    max-width: 350px;
+    width: 100%;
+    margin-right: 160px;
+
+    @include max1366 {
+      max-width: 330px;
+      width: 100%;
+      margin-right: 40px;
+    }
+
+    @include max1300 {
+      display: flex;
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__fon {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 200px;
+    max-height: 200px;
+    transition: 0.3s;
+
+    @include min1024 {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    @include max1300 {
+      margin: auto 50px auto auto;
+    }
+
+    @include max600 {
+      display: none;
+    }
+  }
+
+  &__body {
+    width: 100%;
+  }
+
+  &__top {
+    margin-bottom: 64px;
+
+    @include max1300 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .title{
+      margin-bottom: 0;
+      &--mb{
+        margin-bottom: 64px;
+
+        @include max1366 {
+          margin-bottom: 40px;
+        }
+
+        @include max768 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.buttons-el {
+  background: #f5eeee;
+  border-radius: 15px;
+
+  @include max1300 {
+    flex-grow: 1;
+    max-width: 50%;
+  }
+
+  @include max600 {
+    max-width: 100%;
+  }
+
+  &__button {
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #1e1e1e;
+    transition: 0.3s;
+
+    @include min1024 {
+      &:hover {
+        background: #efa1c3;
+        border-radius: 15px;
+        color: #efeeee;
+        svg {
+          fill: #efeeee;
+        }
+      }
+    }
+
+    &.active {
+      background: #efa1c3;
+      border-radius: 15px;
+      color: #efeeee;
+      svg {
+        fill: #efeeee;
+      }
+    }
+
+    @include max1024 {
+      font-size: 20px;
+      padding: 15px;
+    }
+
+    @include max600 {
+      font-size: 16px;
+      padding: 10px 15px;
+    }
+  }
+}
+
+.arrow-mini {
+  transition: 0.3s;
+  margin-left: auto;
+}
+
+.dropendrop-block {
+  cursor: pointer;
+  width: 260px;
+  height: 260px;
+  input {
+    display: none;
+  }
+
+  display: inline-flex;
+  position: relative;
+  &__info {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #efeeee;
+
+    svg {
+      margin: 20px 0;
+    }
+
+    @include max600 {
+      font-size: 16px;
+    }
+  }
+
+  picture {
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(.jpg);
+      border-radius: 50%;
+    }
+  }
+
+  @include max600 {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.plus-big {
+  width: 64px;
+  height: 64px;
+  fill: #efeeee;
+
+  @include max600 {
+    width: 45px;
+    height: 45px;
+  }
+}
+.form-contacts {
+  @include max1024 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.block-form {
+  &_grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include max600 {
+      display: block;
+
+      .block-form__item {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.w33 {
+  grid-column: 4 span;
+
+  @include max600 {
+    grid-column: 12 span;
+  }
+}
+
+.w50 {
+  grid-column: 6 span;
+
+  @include max600 {
+    grid-column: 12 span;
+  }
+}
+
+.w67 {
+  grid-column: 8 span;
+
+  @include max600 {
+    grid-column: 12 span;
+  }
+}
+
+.form-delivery {
+  @include max600 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-form__input {
+    background: #efeeee;
+  }
+}
+
+.fon-bg-big {
+  width: 200px;
+  height: 200px;
+  transition: 0.3s;
+
+  &_right {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+
+    @include max1300 {
+      bottom: auto;
+      top: 10%;
+      right: 50px;
+
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include max600 {
+    display: none;
+  }
+}

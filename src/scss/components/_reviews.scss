@@ -1,0 +1,455 @@
+.reviews {
+  &__title {
+  }
+
+  &__inner {
+  }
+
+  &__form {
+  }
+}
+
+.form-reviews {
+  &__row {
+  }
+
+  &__field {
+    margin-bottom: 65px;
+    position: relative;
+
+    @include max1366 {
+      margin-bottom: 40px;
+    }
+
+    @include max768 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__name {
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+
+    @include max768 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+  }
+
+  &__label {
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    color: #1e1e1e;
+    display: block;
+    margin-bottom: 30px;
+
+    @include max1366 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    @include max768 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    @include max600 {
+      font-size: 18px;
+    }
+  }
+
+  &__item {
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    background: #d9d9d9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    padding: 15px 25px;
+    width: 100%;
+
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    color: #1e1e1e;
+    transition: 0.3s;
+
+    @include max768 {
+      font-size: 14px;
+      border-radius: 5px;
+    }
+
+    @include max600 {
+      padding: 10px 15px;
+    }
+
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, #c700ff, #ff00ff);
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    &:focus {
+      box-shadow: 0px 4px 10px rgb(233 139 178 / 50%);
+      border: none;
+    }
+
+    &_textarea {
+      min-height: 200px;
+      resize: none;
+      padding: 25px;
+
+      @include max1366 {
+        min-height: 200px;
+      }
+
+      @include max768 {
+        min-height: 120px;
+      }
+
+      @include max600 {
+        min-height: 100px;
+      }
+    }
+  }
+
+  &__error {
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+
+    @include max1600 {
+      margin-bottom: 60px;
+    }
+
+    @include max600 {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__rating {
+    margin-right: 10px;
+  }
+
+  &__buttons {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px -15px;
+
+    @include max1024 {
+      margin: -5px -15px;
+    }
+
+    @include max600 {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin: 5px 15px;
+
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    &.btn_ {
+      background: #efeeee;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: #1e1e1e;
+
+      @include min1024 {
+        &:hover {
+          background: #fad6d6;
+        }
+      }
+    }
+
+    @include max1366 {
+      height: 40px;
+    }
+
+    @include max1024 {
+      margin: 5px 15px;
+      min-width: auto;
+    }
+
+    @include max600 {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}
+
+.slider-reviews__slide {
+  height: 100%;
+}
+
+.reviews-slider {
+  background: linear-gradient(79.28deg, #ad6ed3 25.33%, #efa1c3 82.39%);
+  padding-top: 50px;
+
+  .card-main__item {
+    justify-content: center;
+  }
+
+  @include max1366 {
+    padding-top: 30px;
+  }
+}
+
+.reviews-card {
+  //height: auto;
+  &__inner {
+    background: #f5eeee;
+    border-radius: 35px;
+    padding: 25px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    min-height: 230px;
+
+    @include max1366 {
+      padding: 20px;
+    }
+
+    @include max600 {
+      padding: 15px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 20px;
+
+    @include max1366 {
+      display: block;
+    }
+
+    @include max600 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+
+    @include max1366 {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include max1366 {
+      width: 100px;
+      height: 100px;
+    }
+
+    @include max600 {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__date {
+    display: block;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    color: #1e1e1e;
+    margin-top: auto;
+    align-self: flex-end;
+    margin-right: 48px;
+    flex-shrink: 0;
+
+    @include max1366 {
+      font-size: 14px;
+      margin-right: 15px;
+    }
+
+    @include max600 {
+      font-size: 14px;
+      padding-right: 10px;
+      margin-right: auto;
+    }
+  }
+
+  &__text {
+    margin-left: 25px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1e1e1e;
+
+    @include max1366 {
+      margin-left: 0;
+    }
+
+    @include max600 {
+      line-height: 126.2%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+
+  &__navigation {
+    margin: 64px auto 48px;
+    max-width: 300px;
+    @include max1366 {
+      max-width: 200px;
+    }
+    .card-main__arrow {
+      fill: #1e1e1e;
+    }
+
+    @include min1024 {
+      .card-main__btn {
+        &:hover {
+          .card-main__arrow {
+            fill: #efeeee;
+          }
+        }
+      }
+    }
+
+    @include max1366 {
+      margin: 30px auto;
+    }
+
+    @include max768 {
+      max-width: 180px;
+    }
+
+    @include max600 {
+      max-width: 150px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-left: auto;
+
+    @include max1024 {
+      width: auto;
+      margin-left: auto;
+    }
+
+    @include max600 {
+      margin: 0 auto;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    width: 24px;
+    height: 24px;
+
+    img {
+      width: 100%;
+    }
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    @include max1366 {
+      width: 20px;
+      height: 20px;
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+
+    @include max1024 {
+      width: 15px;
+      height: 15px;
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+    }
+
+    @include max600 {
+      width: 10px;
+      height: 10px;
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+    }
+  }
+
+  &__name {
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #1e1e1e;
+    margin-left: 20px;
+
+    @include max1366 {
+      font-size: 18px;
+    }
+
+    @include max600 {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.text-container {
+  transition: 0.3s;
+  max-height: inherit;
+  overflow: visible;
+  &.active {
+    overflow: hidden;
+    max-height: 194px;
+  }
+}
+
+.text-btn {
+  display: none;
+  max-width: 100%;
+  margin-bottom: 10px;
+  margin-top: -4px;
+  font-size: 14px;
+  color: #efa1c3;
+  &.btn-reset {
+    max-width: 100%;
+  }
+}

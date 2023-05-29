@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">Отзывы</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <div class="reviews container">
+                <h1 class="reviews__title title">Отзывы</h1>
+
+                <div class="reviews__inner">
+                  <!-- form-reviews -->
+                  <form action="#" class="reviews__form form-reviews">
+                    <div class="form-reviews__row">
+                      <div class="block-form__item item-form item-form_margin-bottom">
+                        <label for="name" class="item-form__label">Имя</label>
+                        <div class="item-form__wrap">
+                          <input class="item-form__input" id="name" type="name" name="name">
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small  class="reviews-name__error-msg item-form__error">Заполните поле</small>
+                      </div>
+
+                      <div class="block-form__item item-form item-form_margin-bottom">
+                        <label for="email" class="item-form__label">Email</label>
+                        <div class="item-form__wrap">
+                          <input class="item-form__input" id="email" type="email" name="email">
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small  class="reviews-email__error-msg item-form__error">Заполните поле</small>
+                      </div>
+
+                      <div class="block-form__item item-form item-form_margin-bottom">
+                        <label for="order-number" class="item-form__label">Номер заказа</label>
+                        <div class="item-form__wrap">
+                          <input class="item-form__input" id="order-number" type="order-number" name="order-number">
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small type="text" name="order-number" class="reviews-order-number__error-msg item-form__error">Заполните поле</small>
+                      </div>
+
+                      <div class="block-form__item item-form item-form_margin-bottom">
+                        <label for="review" class="item-form__label">Ваш отзыв</label>
+                        <div class="item-form__wrap">
+                          <textarea
+                          id="review"
+                          name="review"
+                          class="form-reviews__item item-form__input form-reviews__item_textarea"
+                        ></textarea>
+                          <div class="item-form__border"></div>
+                        </div>
+                        <small type="text" name="review" class="reviews-review__error-msg item-form__error">Заполните поле</small>
+                      </div>
+
+
+                      <div class="form-reviews__block">
+                        <div class="form-reviews__rating">
+                          <div class="form-reviews__name">Ваша оценка</div>
+
+                          <fieldset class="rating">
+                            <div class="rating__group">
+                              <input
+                                class="rating__star"
+                                id="1"
+                                type="radio"
+                                name="mood"
+                                value="1"
+                                aria-label="1"
+                              />
+                              <input
+                                class="rating__star"
+                                type="radio"
+                                name="mood"
+                                value="2"
+                                aria-label="2"
+                              />
+                              <input
+                                class="rating__star"
+                                type="radio"
+                                name="mood"
+                                value="3"
+                                aria-label="3"
+                              />
+                              <input
+                                class="rating__star"
+                                type="radio"
+                                name="mood"
+                                value="4"
+                                aria-label="4"
+                                checked
+                              />
+                              <input
+                                class="rating__star"
+                                type="radio"
+                                name="mood"
+                                value="5"
+                                aria-label="5"
+                              />
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="form-reviews__buttons">
+                          <button
+                            class="form-reviews__button btn"
+                            type="submit"
+                          >
+                            <span>Отправить</span>
+                          </button>
+                          <button
+                            class="form-reviews__button btn_"
+                            type="reset"
+                          >
+                            Очистить все
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                  <!--End form-reviews -->
+                </div>
+              </div>
+
+              <div class="title container">Что говорят наши клиенты</div>
+              <!-- reviews-slider -->
+              <div class="reviews-slider">
+                <div class="reviews-slider__inner container">
+                  <div class="swiper reviews-slider__slider slider-reviews">
+                    <div
+                      class="swiper-wrapper card-main__wrapper slider-reviews__wrapper"
+                    >
+                    @include('partials/_reviews-cads.html')
+                    </div>
+
+                    <div class="reviews-card__navigation">
+                      <div class="card-main card-main_margin">
+                        <div class="card-main__item">
+                          <div
+                            class="card-main__next card-main__btn slider-reviews__next btn-slider swiper-button-next btn-slider_white"
+                          >
+                            <svg class="card-main__arrow">
+                              <use xlink:href="img/sprite.svg#arrow"></use>
+                            </svg>
+                          </div>
+                          <div
+                            class="slider-bg-pagination-fraction slider-bg-pagination-fraction-reviews"
+                          ></div>
+                          <div
+                            class="card-main__prev card-main__btn slider-reviews__prev btn-slider swiper-button-prev btn-slider_white"
+                          >
+                            <svg class="card-main__arrow">
+                              <use xlink:href="img/sprite.svg#arrow"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End reviews-slider -->
+
+              <div class="container">
+                @include('partials/_questions.html')
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html')
+      @include('partials/modal.html')
+    </div>
+  </body>
+</html>

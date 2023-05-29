@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container container-main">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Личные кабинет</a>
+                  </li>
+                  <li class="navigation__item">Личные данные</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+
+              <section class="personal-area">
+                <div class="personal-area__inner container container-main">
+                  <div class="personal-area__nav">
+                    <ul class="personal-area__buttons buttons-el">
+                      <li class="buttons-el__item ">
+                        <a href="#" class="buttons-el__button active">
+                          Личные данные
+                          <svg class="arrow-mini">
+                            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a href="#" class="buttons-el__button">
+                          Адрес доставки
+                          <svg class="arrow-mini">
+                            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          История заказов
+                          <svg class="arrow-mini">
+                            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Отследить заказ
+                          <svg class="arrow-mini">
+                            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Отследить заказ
+                          <svg class="arrow-mini">
+                            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="buttons-el__item">
+                        <a class="buttons-el__button">
+                          Корзина
+                          <svg class="arrow-mini">
+                            <use xlink:href="img/sprite.svg#arrow-catalog"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div class="personal-area__fon">
+                      <img loading="lazy" src="img/personal-icon1.svg" class="image" width="" height="" alt="fon-icon">
+                    </div>
+                  </div>
+
+                  <div class="personal-area__body">
+                    <div class="personal-area__top">
+                      <div class="personal-area__title title title--mb">Личные данные</div>
+                      <label for="avatar" class="personal-area__dropendrop dropendrop-block">
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                        <picture>
+                          <source srcset="img/user.webp" type="image/webp">
+                          <img loading="lazy" src="img/user.jpg" class="image" width="" height="" alt="user">
+                        </picture>
+                        <span class="dropendrop-block__info">
+                          <span>Загрузить</span>
+                          <svg class="plus-big">
+                            <use xlink:href="img/sprite.svg#plus-big"></use>
+                          </svg>
+                          <span>Фото</span>
+                        </span>
+                      </label>
+
+                    </div>
+                    <form class="form-contacts">
+
+                      <div class="form-contacts__block block-form block-form_grid">
+
+                        <div class="block-form__item item-form w33">
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              id="name"
+                              type="name"
+                              name="name"
+                              placeholder=" "
+                            />
+                            <label
+                            for="name"
+                            class="item-form__label form-label item-form__label_text-center"
+                            >Имя</label
+                          >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+
+                            class="reviews-name__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w33">
+
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              id="surname"
+                              type="surname"
+                              name="surname"
+                              placeholder=" "
+                            />
+                            <label
+                            for="surname"
+                            class="item-form__label form-label item-form__label_text-center"
+                            >Фамилия</label
+                          >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="surname"
+                            class="reviews-surname__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w33">
+
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain"
+                              id="patronymic"
+                              type="patronymic"
+                              name="patronymic"
+                              placeholder=" "
+                            />
+                            <label
+                            for="patronymic"
+                            class="item-form__label form-label item-form__label_text-center"
+                            >Отчество</label
+                          >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+                            type="text"
+                            name="patronymic"
+                            class="reviews-patronymic__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w50">
+
+                          <div class="item-form__wrap form-item">
+                            <input
+                            class="item-form__input inputMain"
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder=" "
+                          />
+                            <label
+                            for="Email"
+                            class="item-form__label form-label item-form__label_text-center"
+                            >Email</label
+                          >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+
+                            class="reviews-Email__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                        <div class="block-form__item item-form w50">
+
+                          <div class="item-form__wrap form-item">
+                            <input
+                              class="item-form__input inputMain phone-mask"
+                              type="tel"
+                              name="tel"
+                              placeholder=" "
+                            />
+                            <label
+                            for="tel"
+                            class="item-form__label form-label item-form__label_text-center"
+                            >Номер телефона</label
+                          >
+                            <div class="item-form__border"></div>
+                          </div>
+                          <small
+
+                            class="reviews-tel__error-msg item-form__error"
+                            >Заполните поле</small
+                          >
+                        </div>
+
+                      </div>
+
+                      <div class="form-contacts__button btn">
+                        <span>Сохранить изменения</span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+
+
+  </body>
+</html>

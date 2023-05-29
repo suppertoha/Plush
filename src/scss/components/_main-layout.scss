@@ -1,0 +1,19 @@
+.main {
+
+  &__layout {
+    margin-top: 280px;
+
+    @include max1366 {
+      margin-top: 260px;
+    }
+
+    @include max1024 {
+      margin-top: 260px;
+    }
+
+    @include max768 {
+      margin-top: 130px;
+    }
+  }
+
+}

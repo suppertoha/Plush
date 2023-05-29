@@ -1,0 +1,24 @@
+.scrollable-area {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.ps__thumb-y {
+  background-color: #efa1c3;
+  border-radius: 2px;
+  transition: background-color .4s linear,width .4s ease-in-out;
+  -webkit-transition: background-color .4s linear,width .4s ease-in-out;
+  width: 3px;
+  right: 2px;
+  position: absolute;
+  z-index: -1;
+}
+
+.body-catalog__items.scrollable-area{
+  overflow-y: scroll;
+  height: 565px;
+  @include max1366 {
+    height: 455px;
+
+  }
+}

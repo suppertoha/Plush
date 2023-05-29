@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Корзина</a>
+                  </li>
+                  <li class="navigation__item">Оформление заказа</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <!-- main-block -->
+              <div class="main-block">
+                <section class="main-block__inner container">
+                  <h1 class="title">Оформление заказа</h1>
+                  <div class="main-block__wrapper">
+                    <div class="main-block__body">
+                      <div class="main-block__checkout checkout">
+                        <ul class="checkout__inner">
+                          <li class="checkout__item">
+                            <div class="checkout__cart cart-checkout">
+                              <div class="cart-checkout__inner">
+                                <div class="cart-checkout__header header-name">
+                                  <svg class="header-name__icon">
+                                    <use
+                                      xlink:href="img/sprite.svg#personal-area"
+                                    ></use>
+                                  </svg>
+
+                                  <span class="header-name__text"
+                                    >Покупатель</span
+                                  >
+                                </div>
+
+                                <div class="cart-checkout__container">
+                                  <span class="cart-checkout__info info"
+                                    >Авторизуйтесь, и мы сохраним всю информацию
+                                    по заказу и автоматически заполним ваши
+                                    контактные данные</span
+                                  >
+
+                                  <div class="cart-checkout__buttons">
+                                    <a
+                                      href="#"
+                                      class="cart-checkout__btn active"
+                                      >Войти</a
+                                    >
+                                    <a href="#" class="cart-checkout__btn"
+                                      >Зарегистрироваться</a
+                                    >
+                                  </div>
+
+                                  <form
+                                    action="#"
+                                    class="cart-checkout__form form-reviews"
+                                  >
+                                    <div class="form-reviews__row form-reviews__row_flex">
+                                      <div
+                                        class="block-form__item item-form item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="name"
+                                          class="item-form__label"
+                                          >ФИО</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input"
+                                            id="name"
+                                            type="name"
+                                            name="name"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+
+                                          class="reviews-name__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                        class="block-form__item item-form item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="email"
+                                          class="item-form__label"
+                                          >E-mail</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input"
+                                            id="email"
+                                            type="email"
+                                            name="email"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+
+                                          class="reviews-email__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                        class="block-form__item item-form item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="tel"
+                                          class="item-form__label"
+                                          >Телефон</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input phone-mask"
+                                            id="tel"
+                                            type="tel"
+                                            name="tel"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+
+                                          class="reviews-tel__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                        class="block-form__item item-form item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="city"
+                                          class="item-form__label"
+                                          >Город</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input"
+                                            id="city"
+                                            type="text"
+                                            name="city"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+                                          type="text"
+                                          name="city"
+                                          class="reviews-city__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                        class="block-form__item item-form item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="street"
+                                          class="item-form__label"
+                                          >Улица</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input"
+                                            id="street"
+                                            type="text"
+                                            name="street"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+                                          type="text"
+                                          name="street"
+                                          class="reviews-street__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                        class="block-form__item item-form item-form_w50 item-form_margin-right item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="house"
+                                          class="item-form__label"
+                                          >Дом</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input"
+                                            id="house"
+                                            type="text"
+                                            name="house"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+                                          type="text"
+                                          name="house"
+                                          class="reviews-house__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                        class="block-form__item item-form item-form_w50 item-form_margin-bottom"
+                                      >
+                                        <label
+                                          for="
+apartment"
+                                          class="item-form__label"
+                                          >Квартира</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <input
+                                            class="item-form__input"
+                                            id="
+apartment"
+                                            type="text"
+                                            name="
+apartment"
+                                          />
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+                                          type="text"
+                                          name="
+apartment"
+                                          class="reviews- apartment__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+
+                                      <div
+                                      class="block-form__item item-form item-form_margin-bottom"
+                                    >
+                                      <label
+                                        for="postcode"
+                                        class="item-form__label"
+                                        >Почтовый индекс</label
+                                      >
+                                      <div class="item-form__wrap">
+                                        <input
+                                          class="item-form__input"
+                                          id="postcode"
+                                          type="text"
+                                          name="postcode"
+                                        />
+                                        <div class="item-form__border"></div>
+                                      </div>
+                                      <small
+                                        type="text"
+                                        name="postcode"
+                                        class="reviews-postcode__error-msg item-form__error"
+                                        >Заполните поле</small
+                                      >
+                                    </div>
+
+                                      <div
+                                        class="block-form__item item-form"
+                                      >
+                                        <label
+                                          for="review"
+                                          class="item-form__label"
+                                          >Комментарий</label
+                                        >
+                                        <div class="item-form__wrap">
+                                          <textarea
+                                            id="review"
+                                            name="review"
+                                            class="form-reviews__item item-form__input form-reviews__item_textarea"
+                                          ></textarea>
+                                          <div class="item-form__border"></div>
+                                        </div>
+                                        <small
+                                          type="text"
+                                          name="review"
+                                          class="reviews-review__error-msg item-form__error"
+                                          >Заполните поле</small
+                                        >
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+
+                          <li class="checkout__item">
+                            <div class="checkout__cart cart-checkout">
+                              <div class="cart-checkout__inner">
+                                <div class="cart-checkout__header header-name">
+                                  <svg class="header-name__icon">
+                                    <use
+                                      xlink:href="img/sprite.svg#delivery"
+                                    ></use>
+                                  </svg>
+
+                                  <span class="header-name__text"
+                                    >Способ доставки</span
+                                  >
+                                </div>
+
+                                <div class="cart-checkout__container">
+
+                                  <form action="#" class="cart-checkout__form form-checkout">
+                                    <ul class="form-checkout__inner">
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio">
+                                            <input type="radio" name="toggle" checked="" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Самовывоз (Алтуфьевское ш., 37, стр. 1 Центр торговли, этаж 3)</strong>
+                                          </label>
+
+                                          <div class="form-checkout__description">
+                                            Бесплатно
+                                          </div>
+                                        </div>
+                                      </li>
+
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio">
+                                            <input type="radio" name="toggle" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Курьером по г. Москве </strong>
+                                          </label>
+
+                                          <div class="form-checkout__description">
+                                            От 400 Руб.
+                                          </div>
+                                        </div>
+                                      </li>
+
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio">
+                                            <input type="radio" name="toggle" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Доставка почтой РФ </strong>
+                                          </label>
+
+                                          <div class="form-checkout__description">
+                                            От 330 Руб.
+                                          </div>
+                                        </div>
+                                      </li>
+
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio">
+                                            <input type="radio" name="toggle" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Доставка ТК СДЭК </strong>
+                                          </label>
+
+                                          <div class="form-checkout__description">
+                                            От 300 Руб.
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="checkout__item">
+                            <div class="checkout__cart cart-checkout">
+                              <div class="cart-checkout__inner">
+                                <div class="cart-checkout__header header-name">
+                                  <svg class="header-name__icon">
+                                    <use
+                                      xlink:href="img/sprite.svg#payment"
+                                    ></use>
+                                  </svg>
+
+                                  <span class="header-name__text"
+                                    >Способ оплаты</span
+                                  >
+                                </div>
+
+                                <div class="cart-checkout__container">
+
+                                  <form action="#" class="cart-checkout__form form-checkout">
+                                    <ul class="form-checkout__inner form-checkout__inner_grid">
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio radio_big">
+                                            <input type="radio" name="toggle" checked="" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Наличными</strong>
+                                          </label>
+
+                                        </div>
+                                      </li>
+
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio radio_big">
+                                            <input type="radio" name="toggle" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Наложенный платёж</strong>
+                                          </label>
+
+                                        </div>
+                                      </li>
+
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio radio_big">
+                                            <input type="radio" name="toggle" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">Оплата картой</strong>
+                                          </label>
+
+                                        </div>
+                                      </li>
+
+                                      <li class="form-checkout__item">
+                                        <div class="form-checkout__button">
+                                          <label class="form-checkout__radio radio radio_big">
+                                            <input type="radio" name="toggle" class=" radio__input">
+                                            <span></span>
+                                            <strong class="radio__name">По счёту (Для Юр. лиц)</strong>
+                                          </label>
+
+                                        </div>
+                                      </li>
+
+
+                                    </ul>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="main-block__card card-goods">
+                        <div class="card-goods">
+                          <div class="card-goods__inner card-goods__inner--1366">
+                            <div
+                              class="card-goods__header card-goods__header_padding-null"
+                            >
+                            <div class="cart-checkout__header header-name header-name_flex">
+                              <div class="header-name__block">
+                                <svg class="header-name__icon">
+                                  <use
+                                    xlink:href="img/sprite.svg#bascet"
+                                  ></use>
+                                </svg>
+
+                                <span class="header-name__text"
+                                  >Товары в заказе</span
+                                >
+                              </div>
+
+                              <button class="header-name__button">
+                                Редактировать
+                              </button>
+                            </div>
+                            </div>
+                            <ul class="card-goods__items">
+                              <li
+                                class="card-goods__item card-goods__item_flex"
+                              >
+                                <div class="card-goods__el">
+                                  <div class="card-goods__product product">
+                                    <div class="product__inner">
+                                      <div class="product__image">
+                                        <picture>
+                                          <source
+                                            srcset="img/product-img.webp"
+                                            type="image/webp"
+                                          />
+                                          <img
+                                            loading="lazy"
+                                            src="img/product-img.png"
+                                            class="image"
+                                            width=""
+                                            height=""
+                                            alt="img"
+                                          />
+                                        </picture>
+                                      </div>
+
+                                      <div class="product__block">
+                                        <span class="product__name"
+                                          >Мягкая игрушка “Gravity Falls” Билл
+                                          Шифр</span
+                                        >
+                                        <span class="product__description"
+                                          >Осталось 154 шт</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-goods__wrap">
+                                  <div
+                                    class="card-goods__el card-goods__el_col"
+                                  >
+                                    <div class="card-goods__stepper stepper">
+                                      <button
+                                        class="stepper__btn stepper__btn--down stepper__btn--disabled"
+                                        aria-label="Уменьшить количество"
+                                      >
+                                        <svg class="stepper__svg">
+                                          <use
+                                            xlink:href="img/sprite.svg#minus"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                      <label class="stepper__field">
+                                        <input
+                                          type="text"
+                                          value="1"
+                                          maxlength="6"
+                                          class="stepper__input"
+                                        />
+                                        <span class="stepper__text">шт</span>
+                                      </label>
+                                      <button
+                                        class="stepper__btn stepper__btn--up"
+                                        aria-label="Увеличить количество"
+                                      >
+                                        <svg class="stepper__svg">
+                                          <use
+                                            xlink:href="img/sprite.svg#plus"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <span class="card-goods__weight">
+                                      Вес: 5 г
+                                    </span>
+                                  </div>
+
+                                  <div class="card-goods__el">
+                                    <div class="card-goods__total total">
+                                      <div class="card-goods__head">
+                                        <span class="card-goods__sum"
+                                          >225 ₽</span
+                                        >
+                                        <span
+                                          class="total__description total__description_color"
+                                          >9 шт. х 25 ₽</span
+                                        >
+                                      </div>
+                                      <div
+                                        class="total__block total__block_right"
+                                      >
+                                        <button
+                                          class="total__delete delete-btn"
+                                        >
+                                          Удалить
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li
+                                class="card-goods__item card-goods__item_flex"
+                              >
+                                <div class="card-goods__el">
+                                  <div class="card-goods__product product">
+                                    <div class="product__inner">
+                                      <div class="product__image">
+                                        <picture>
+                                          <source
+                                            srcset="img/product-img.webp"
+                                            type="image/webp"
+                                          />
+                                          <img
+                                            loading="lazy"
+                                            src="img/product-img.png"
+                                            class="image"
+                                            width=""
+                                            height=""
+                                            alt="img"
+                                          />
+                                        </picture>
+                                      </div>
+
+                                      <div class="product__block">
+                                        <span class="product__name"
+                                          >Мягкая игрушка “Gravity Falls” Билл
+                                          Шифр</span
+                                        >
+                                        <span class="product__description"
+                                          >Осталось 154 шт</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-goods__wrap">
+                                  <div
+                                    class="card-goods__el card-goods__el_col"
+                                  >
+                                    <div class="card-goods__stepper stepper">
+                                      <button
+                                        class="stepper__btn stepper__btn--down stepper__btn--disabled"
+                                        aria-label="Уменьшить количество"
+                                      >
+                                        <svg class="stepper__svg">
+                                          <use
+                                            xlink:href="img/sprite.svg#minus"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                      <label class="stepper__field">
+                                        <input
+                                          type="text"
+                                          value="1"
+                                          maxlength="6"
+                                          class="stepper__input"
+                                        />
+                                        <span class="stepper__text">шт</span>
+                                      </label>
+                                      <button
+                                        class="stepper__btn stepper__btn--up"
+                                        aria-label="Увеличить количество"
+                                      >
+                                        <svg class="stepper__svg">
+                                          <use
+                                            xlink:href="img/sprite.svg#plus"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <span class="card-goods__weight">
+                                      Вес: 5 г
+                                    </span>
+                                  </div>
+
+                                  <div class="card-goods__el">
+                                    <div class="card-goods__total total">
+                                      <div class="card-goods__head">
+                                        <span class="card-goods__sum"
+                                          >225 ₽</span
+                                        >
+                                        <span
+                                          class="total__description total__description_color"
+                                          >9 шт. х 25 ₽</span
+                                        >
+                                      </div>
+                                      <div
+                                        class="total__block total__block_right"
+                                      >
+                                        <button
+                                          class="total__delete delete-btn"
+                                        >
+                                          Удалить
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <li
+                                class="card-goods__item card-goods__item_flex"
+                              >
+                                <div class="card-goods__el">
+                                  <div class="card-goods__product product">
+                                    <div class="product__inner">
+                                      <div class="product__image">
+                                        <picture>
+                                          <source
+                                            srcset="img/product-img.webp"
+                                            type="image/webp"
+                                          />
+                                          <img
+                                            loading="lazy"
+                                            src="img/product-img.png"
+                                            class="image"
+                                            width=""
+                                            height=""
+                                            alt="img"
+                                          />
+                                        </picture>
+                                      </div>
+
+                                      <div class="product__block">
+                                        <span class="product__name"
+                                          >Мягкая игрушка “Gravity Falls” Билл
+                                          Шифр</span
+                                        >
+                                        <span class="product__description"
+                                          >Осталось 154 шт</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-goods__wrap">
+                                  <div
+                                    class="card-goods__el card-goods__el_col"
+                                  >
+                                    <div class="card-goods__stepper stepper">
+                                      <button
+                                        class="stepper__btn stepper__btn--down stepper__btn--disabled"
+                                        aria-label="Уменьшить количество"
+                                      >
+                                        <svg class="stepper__svg">
+                                          <use
+                                            xlink:href="img/sprite.svg#minus"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                      <label class="stepper__field">
+                                        <input
+                                          type="text"
+                                          value="1"
+                                          maxlength="6"
+                                          class="stepper__input"
+                                        />
+                                        <span class="stepper__text">шт</span>
+                                      </label>
+                                      <button
+                                        class="stepper__btn stepper__btn--up"
+                                        aria-label="Увеличить количество"
+                                      >
+                                        <svg class="stepper__svg">
+                                          <use
+                                            xlink:href="img/sprite.svg#plus"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <span class="card-goods__weight">
+                                      Вес: 5 г
+                                    </span>
+                                  </div>
+
+                                  <div class="card-goods__el">
+                                    <div class="card-goods__total total">
+                                      <div class="card-goods__head">
+                                        <span class="card-goods__sum"
+                                          >225 ₽</span
+                                        >
+                                        <span
+                                          class="total__description total__description_color"
+                                          >9 шт. х 25 ₽</span
+                                        >
+                                      </div>
+                                      <div
+                                        class="total__block total__block_right"
+                                      >
+                                        <button
+                                          class="total__delete delete-btn"
+                                        >
+                                          Удалить
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="main-block__description description-card">
+                      <div class="description-card__inner">
+                        <div class="description-card__header">
+                          <span class="description-card__name">
+                            Сумма заказа
+                          </span>
+                          <ul class="description-card__list">
+                            <li class="description-card__item">
+                              <span class="description-card__el"
+                                >27 товаров на сумму</span
+                              >
+                              <span class="description-card__el">675 ₽</span>
+                            </li>
+
+                            <li class="description-card__item">
+                              <span class="description-card__el">СДЭК</span>
+                              <span class="description-card__el">300 ₽</span>
+                            </li>
+
+                            <li class="description-card__item">
+                              <span class="description-card__el"
+                                >Способ оплаты</span
+                              >
+                              <span class="description-card__el">Картой</span>
+                            </li>
+                            <li class="description-card__item">
+                              <span class="description-card__el"
+                                >Общий вес</span
+                              >
+                              <span class="description-card__el">15 Г</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="description-card__footer">
+                          <div class="description-card__total total">
+                            <div class="total__block total__block_justify">
+                              <span class="total__name">Итого</span>
+                              <span class="total__sum">975 ₽</span>
+                            </div>
+                          </div>
+
+                          <form
+                            action="#"
+                            class="description-card__check check"
+                          >
+                            <label class="check">
+                              <input
+                                type="checkbox"
+                                name="toggle"
+                                checked=""
+                                class="check__input"
+                              />
+                              <span></span>
+                              <strong class="check__name">
+                                Я прочитал(а) и принимаю правила и условия сайта
+                              </strong>
+                            </label>
+                          </form>
+
+                          <button class="description-card__button btn-violet">
+                            Подтвердить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!--End main-block -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+  </body>
+</html>

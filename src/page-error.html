@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Каталог</a>
+                  </li>
+                  <li class="navigation__item">Ошибка 404</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <div class="main-error ">
+                <div class="main-error__body container">
+                  <div class="main-error__inner ">
+                    <div class="main-error__description">
+                      Извините, данная страница недоступна
+                    </div>
+
+                    <div class="main-error__images">
+                      <picture class="main-error__image">
+                        <source srcset="img/404.webp" type="image/webp">
+                        <img loading="lazy" src="img/404.png" class="image" width="" height="" alt="error">
+                      </picture>
+
+                      <div class="main-error__icon">
+                        <img loading="lazy" src="img/icon-error.svg" class="image" width="" height="" alt="icon-error">
+                      </div>
+                    </div>
+
+                    <div class="main-error__block">
+                      <div class="main-error__info">Вы можете посетить другие разделы</div>
+                      <ul class="main-error__list">
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link active">Главная</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Каталог</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Доставка и оплата</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">О компании</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Отзывы</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Контакты</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Личный кабинет</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Корзина</a>
+                        </li>
+
+                        <li class="main-error__item">
+                          <a href="#" class="main-error__link">Избранное</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+  </body>
+</html>

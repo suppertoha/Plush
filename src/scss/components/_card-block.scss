@@ -1,0 +1,39 @@
+.card-block{
+  &__items{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include max1366 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include max1300 {
+      grid-gap: 20px;
+    }
+
+    @include max768 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  &--catalog{
+    @include min1024 {
+      .card-main{
+        &:hover{
+          .price-card{
+            max-height: inherit;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
