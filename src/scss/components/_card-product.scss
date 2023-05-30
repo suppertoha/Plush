@@ -304,6 +304,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: -5px;
+  position: relative;
+  padding-bottom: 20px;
 
   &__item {
     margin: 5px;
@@ -312,6 +314,21 @@
     @include max1024 {
       flex-grow: 0;
     }
+
+    .active{
+      ~.delivery-button__info{
+        display: block;
+      }
+    }
+  }
+
+  &__info{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    left: 0;
+    bottom: -5px;
+    display: none;
   }
 }
 

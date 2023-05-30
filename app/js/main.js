@@ -43,6 +43,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_body_scroll__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/body-scroll */ "./src/js/components/body-scroll.js");
 /* harmony import */ var _components_slider_product__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/slider-product */ "./src/js/components/slider-product.js");
 /* harmony import */ var _components_slider_product__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_components_slider_product__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _components_cards_mobile_click__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/cards-mobile-click */ "./src/js/components/cards-mobile-click.js");
+/* harmony import */ var _components_cards_mobile_click__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_components_cards_mobile_click__WEBPACK_IMPORTED_MODULE_19__);
 
 
 
@@ -56,6 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //import './components/videos';
+
 
 
 
@@ -322,6 +325,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_0__);
 // Реализация бургер-меню
 
+
+/***/ }),
+
+/***/ "./src/js/components/cards-mobile-click.js":
+/*!*************************************************!*\
+  !*** ./src/js/components/cards-mobile-click.js ***!
+  \*************************************************/
+/***/ (() => {
+
+// Получаем все элементы с классом "card-main"
+const cards = document.querySelectorAll('.card-main__card');
+
+// Перебираем все найденные элементы
+cards.forEach(card => {
+  // Добавляем обработчик клика
+  card.addEventListener('click', function (event) {
+    // Проверяем условие ширины экрана
+    if (window.innerWidth < 1024) {
+      // Проверяем, есть ли у элемента класс "active"
+      if (!this.classList.contains('active')) {
+        // Добавляем класс "active"
+        this.classList.add('active');
+      }
+    }
+  });
+});
 
 /***/ }),
 

@@ -21,6 +21,7 @@ import './components/mouse-hover';
 import './components/scrollable';
 import './components/body-scroll';
 import './components/slider-product';
+import './components/cards-mobile-click';
 
 
 

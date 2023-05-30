@@ -7,8 +7,24 @@
     height: 100%;
   }
 
-  &__card{
+  &__card {
     height: 100%;
+
+    &.active{
+      .card-main__block:before, .card-main__wrap-block:before{
+        display: none;
+      }
+
+      .card-main__bottom {
+        bottom: -60px;
+      }
+
+      @include max1300 {
+        .card-main__wrap-block{
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 
   &__card {
@@ -23,22 +39,39 @@
       }
     }
 
-
   }
 
-  &__wrap-block{
+  &__wrap-block {
     position: relative;
     z-index: 3;
     background: #efeeee;
+    padding-bottom: 20px;
 
-    padding-bottom: 25px;
+
+    @include max1300 {
+      position: relative;
+      &:before{
+      content: '' ;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      }
+    }
     @include max1024 {
       padding-bottom: 15px;
     }
 
+    @include max1300 {
+      padding-bottom: 10px;
+    }
+
     @media screen and (max-width: 500px) {
       margin-bottom: 8px;
-      padding-bottom: 0;
+      //padding-bottom: 0;
     }
   }
 
@@ -399,10 +432,10 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     max-width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
     flex-grow: 1;
     color: #000000;
     padding: 0 15px;
@@ -410,12 +443,11 @@
 
     -webkit-box-orient: vertical;
     display: -webkit-box;
-    overflow: hidden!important;
+    overflow: hidden !important;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
 
     @include max1366 {
-      font-size: 16px;
       margin: 0 auto 10px;
     }
 
@@ -427,31 +459,27 @@
       margin: 0 auto 5px;
       padding: 0 5px;
     }
+  }
+
+  &__price {
 
   }
 
-  &__price{
-
-
-    @include max1300 {
-      display: none;
-    }
-  }
-
-  &__price-top{
+  &__price-top {
     text-align: center;
     font-weight: 700;
-    font-size: 22px;
-
+    font-size: 20px;
+    span {
+      margin-right: 4px;
+    }
     @media screen and (max-width: 600px) {
       font-size: 18px;
     }
   }
 
-
   &__inner {
     background: #efeeee;
-    border-radius: 30px ;
+    border-radius: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -459,15 +487,28 @@
     height: 100%;
 
     @include max1366 {
-      border-radius: 15px ;
+      border-radius: 15px;
     }
 
     @include max1300 {
       padding-bottom: 45px;
     }
+
+    @media screen and (max-width: 540px) {
+      padding-bottom: 40px;
+
+    }
+
+    @media screen and (max-width: 500px) {
+      padding-bottom: 30px;
+    }
+    @media screen and (max-width: 414px) {
+      padding-bottom: 25px;
+    }
+
   }
 
-  &__bottom{
+  &__bottom {
     transition: 0.3s;
     background: #efeeee;
     position: absolute;
@@ -495,6 +536,22 @@
     background-position-x: center;
     background-position-y: calc(50% + 20px);
     z-index: 1;
+
+    @include max1300 {
+      position: relative;
+      &:before{
+      content: '' ;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      }
+    }
+
+
     @include max768 {
       background-position-y: calc(50% + 15px);
     }
@@ -506,7 +563,6 @@
     @media screen and (max-width: 600px) {
       padding-bottom: 80%;
     }
-
   }
 
   &__head {
@@ -556,10 +612,9 @@
       padding: 10px 5px;
       font-size: 12px;
     }
-
   }
 
-  &__block-btn{
+  &__block-btn {
     position: absolute;
     display: flex;
     right: 15px;
@@ -574,7 +629,6 @@
       right: 5px;
       bottom: 5px;
     }
-
   }
 
   &__favorites {
@@ -636,7 +690,7 @@
       }
     }
 
-    &.active{
+    &.active {
       span {
         position: relative;
 
@@ -734,7 +788,6 @@
   }
 
   &__wrapper {
-
   }
 }
 
@@ -848,6 +901,8 @@
 
   &__item {
     width: 33.3333%;
+    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -862,8 +917,8 @@
       padding: 10px 0;
     }
 
-    @include max600 {
-      padding: 10px 0;
+    @include max1300 {
+      padding: 5px 0;
     }
   }
 
@@ -874,13 +929,22 @@
     font-size: 16px;
     line-height: 15px;
     color: #1e1e1e;
+    white-space: nowrap;
+    @include max1300 {
+      font-size: 14px;
+    }
+
+    @include max375 {
+      font-size: 11px;
+
+    }
   }
 
   &__quantity {
     margin-top: 10px;
     background: #efeeee;
     border-radius: 0px 0px 35px 35px;
-
+    white-space: nowrap;
     font-family: "Gotham Pro";
     font-style: normal;
     font-weight: 500;
@@ -890,17 +954,24 @@
     @include max1366 {
       font-size: 12px;
     }
-    @include max768 {
-      margin-top: 10px;
+    @include max1300 {
+      font-size: 10px;
+    }
+    @include max1300 {
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 8px;
     }
   }
 }
 
 .swiper {
   overflow: inherit;
-  overflow-X: clip;
+  overflow-x: clip;
 
-  &.card-main{
+  &.card-main {
     margin-bottom: 80px;
 
     @include max1024 {
@@ -908,7 +979,7 @@
     }
 
     @include max1300 {
-      margin-bottom: 0;
+      margin-bottom: 60px;
     }
   }
 }
