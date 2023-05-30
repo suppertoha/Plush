@@ -24,6 +24,10 @@
 
   &__list {
     display: flex;
+
+    @include max1024 {
+      margin-left: 15px;
+    }
   }
 
   &__item {
@@ -176,6 +180,11 @@
     align-items: center;
     justify-content: space-between;
     margin: -10px;
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__item {
