@@ -72,6 +72,12 @@
     }
   }
 
+  &__slider{
+    @include max1024 {
+      max-width: 500px;
+    }
+  }
+
   &__price {
     margin-bottom: 20px;
   }

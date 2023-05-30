@@ -119,8 +119,8 @@
   cursor: pointer;
   @include min1024 {
     &:hover {
-      color: #EFA1C3;
-      text-shadow: 0px 0px 1px #EFA1C3;
+      color: #efa1c3;
+      text-shadow: 0px 0px 1px #efa1c3;
     }
   }
   @include max768 {
@@ -185,7 +185,7 @@
 
   @include min1024 {
     &:hover {
-      text-shadow: 0px 0px 1px #EFA1C3;
+      text-shadow: 0px 0px 1px #efa1c3;
     }
   }
 
@@ -212,8 +212,6 @@
   border-radius: 15px;
   transition: 0.3s;
 
-
-
   @include max1366 {
     padding: 0px 15px;
     height: 40px;
@@ -223,7 +221,7 @@
     &:hover {
       border: 2px solid #efa1c3;
       background: #efa1c3;
-      color:  #fff;
+      color: #fff;
 
       //&.button-border_pink {
       //  border: 2px solid #ad6ed3;
@@ -352,7 +350,7 @@
     width: 25px;
     height: 25px;
     @include max1024 {
-      margin-right: 10px
+      margin-right: 10px;
     }
     @include max768 {
       width: 20px;
@@ -397,7 +395,7 @@
     &:hover {
       border: 2px solid #efa1c3;
       background: #efa1c3;
-      color:  #EFEEEE;
+      color: #efeeee;
     }
   }
 }
@@ -421,14 +419,13 @@
     }
   }
 
-  &__radio{
+  &__radio {
     @include min1024 {
       &:hover {
-        .btn-el__button{
+        .btn-el__button {
           background: #efa1c3;
           color: #efeeee;
         }
-
       }
     }
   }
@@ -456,16 +453,14 @@
     @include max1366 {
       font-size: 14px;
     }
-
   }
 }
 
-.scroll-hidden{
+.scroll-hidden {
   overflow: hidden;
 }
 
 .radio-delivery {
-
   input {
     display: none;
   }
@@ -473,15 +468,16 @@
   input:checked + span {
     border: 2px solid #efa1c3;
     background: #efa1c3;
-    color:  #fff;
+    color: #fff;
   }
 
-  input:checked ~ strong{
+  input:checked ~ strong {
     display: block;
   }
 
-  &__button{
-  cursor: pointer;
+  &__button {
+    cursor: pointer;
+    transition: 0.3s;
     display: inline-flex;
     justify-content: center;
     align-self: center;
@@ -491,7 +487,15 @@
     width: 100%;
     height: 100%;
     height: 42px;
-    padding: 0 5px;
+    padding: 0 15px;
+
+    @include min1024 {
+      &:hover {
+        border: 2px solid #efa1c3;
+        background: #efa1c3;
+        color: #fff;
+      }
+    }
   }
 
   &__name {
