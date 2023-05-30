@@ -4160,6 +4160,11 @@ input::-webkit-inner-spin-button {
     padding: 0 5px;
   }
 }
+@media screen and (max-width: 500px) {
+  .card-main__name {
+    font-size: 12px;
+  }
+}
 .card-main__price-top {
   text-align: center;
   font-weight: 700;
@@ -4171,6 +4176,11 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 600px) {
   .card-main__price-top {
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-main__price-top {
+    font-size: 16px;
   }
 }
 .card-main__inner {
