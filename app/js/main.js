@@ -857,20 +857,18 @@ if (sliderHits) {
     },
     breakpoints: {
       460: {
-        slidesPerView: '2',
-        spaceBetween: 10
+        slidesPerView: '2'
       },
       600: {
-        slidesPerView: '2.2',
-        spaceBetween: 10
+        slidesPerView: '3',
+        spaceBetween: 15
       },
       769: {
-        slidesPerView: '3',
-        spaceBetween: 20
+        slidesPerView: '4'
       },
       1024: {
-        slidesPerView: '4',
-        spaceBetween: 20
+        spaceBetween: 20,
+        slidesPerView: '4'
       }
     }
   });
@@ -898,17 +896,19 @@ if (sliderNovelties) {
       }
     },
     breakpoints: {
+      460: {
+        slidesPerView: '2'
+      },
       600: {
-        slidesPerView: '2.2',
-        spaceBetween: 10
+        slidesPerView: '3',
+        spaceBetween: 15
       },
       769: {
-        slidesPerView: '3',
-        spaceBetween: 20
+        slidesPerView: '4'
       },
       1024: {
-        slidesPerView: '4',
-        spaceBetween: 20
+        spaceBetween: 20,
+        slidesPerView: '4'
       }
     }
   });
@@ -937,17 +937,19 @@ if (sliderRecommendations) {
       }
     },
     breakpoints: {
+      460: {
+        slidesPerView: '2'
+      },
       600: {
-        slidesPerView: '2.2',
-        spaceBetween: 10
+        slidesPerView: '3',
+        spaceBetween: 15
       },
       769: {
-        slidesPerView: '3',
-        spaceBetween: 20
+        slidesPerView: '4'
       },
       1024: {
-        slidesPerView: '4',
-        spaceBetween: 20
+        spaceBetween: 20,
+        slidesPerView: '4'
       }
     }
   });

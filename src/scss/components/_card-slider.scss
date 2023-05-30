@@ -32,7 +32,7 @@
     background: #efeeee;
 
     padding-bottom: 25px;
-    @include max768 {
+    @include max1024 {
       padding-bottom: 15px;
     }
 
@@ -364,12 +364,12 @@
         }
       }
 
-      @include max768 {
-        padding: 15px 10px;
+      @include max1300 {
+        padding: 15px;
         font-size: 16px;
       }
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 414px) {
         padding: 10px;
       }
     }
@@ -414,24 +414,24 @@
 
     @include max1366 {
       font-size: 16px;
-      margin: 0 auto 20px;
+      margin: 0 auto 10px;
     }
 
-    @include max768 {
+    @include max1300 {
       font-size: 14px;
     }
 
-    @include max600 {
+    @include max1300 {
       margin: 0 auto 5px;
+      padding: 0 5px;
     }
 
-    @media screen and (max-width: 500px) {
-      padding: 0 3px;
-    }
   }
 
   &__price{
-    @media screen and (max-width: 500px) {
+
+
+    @include max1300 {
       display: none;
     }
   }
@@ -441,8 +441,8 @@
     font-weight: 700;
     font-size: 22px;
 
-    @media screen and (max-width: 500px) {
-      font-size: 20px;
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
     }
   }
 
@@ -461,15 +461,7 @@
     }
 
     @include max1300 {
-      padding-bottom: 120px;
-    }
-
-    @include max600 {
-      padding-bottom: 105px;
-    }
-
-    @media screen and (max-width: 500px) {
-      padding-bottom: 40px;
+      padding-bottom: 45px;
     }
   }
 
@@ -558,15 +550,11 @@
       }
     }
 
-    @include max768 {
-      padding: 15px 30px;
-      font-size: 14px;
-    }
-
-    @media screen and (max-width: 500px) {
+    @include max1300 {
       padding: 10px 5px;
       font-size: 12px;
     }
+
   }
 
   &__block-btn{
@@ -574,6 +562,11 @@
     display: flex;
     right: 15px;
     bottom: 15px;
+
+    @include max1300 {
+      right: 10px;
+      bottom: 10px;
+    }
 
     @media screen and (max-width: 500px) {
       right: 5px;
@@ -641,6 +634,25 @@
       }
     }
 
+    &.active{
+      span {
+        position: relative;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          transition: 0.3s;
+          background: url(../img/heard.svg) no-repeat;
+          background-size: 24px 24px;
+        }
+      }
+    }
+
     &:before {
       content: "";
       display: inline-block;
@@ -654,7 +666,7 @@
       z-index: -1;
     }
 
-    @include max768 {
+    @include max1300 {
       width: 40px;
       height: 40px;
     }
@@ -688,7 +700,7 @@
       }
     }
 
-    @include max768 {
+    @include max1300 {
       width: 18px;
       height: 18px;
     }

@@ -3624,7 +3624,7 @@ input::-webkit-inner-spin-button {
   background: #efeeee;
   padding-bottom: 25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
   .card-main__wrap-block {
     padding-bottom: 15px;
   }
@@ -4009,13 +4009,13 @@ input::-webkit-inner-spin-button {
     background: #efa1c3;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card-main__button_card {
-    padding: 15px 10px;
+    padding: 15px;
     font-size: 16px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 414px) {
   .card-main__button_card {
     padding: 10px;
   }
@@ -4060,25 +4060,21 @@ input::-webkit-inner-spin-button {
 @media (max-width: 1600px) {
   .card-main__name {
     font-size: 16px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card-main__name {
     font-size: 14px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .card-main__name {
     margin: 0 auto 5px;
+    padding: 0 5px;
   }
 }
-@media screen and (max-width: 500px) {
-  .card-main__name {
-    padding: 0 3px;
-  }
-}
-@media screen and (max-width: 500px) {
+@media (max-width: 1024px) {
   .card-main__price {
     display: none;
   }
@@ -4088,9 +4084,9 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   font-size: 22px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .card-main__price-top {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .card-main__inner {
@@ -4114,17 +4110,7 @@ input::-webkit-inner-spin-button {
 }
 @media (max-width: 1024px) {
   .card-main__inner {
-    padding-bottom: 120px;
-  }
-}
-@media (max-width: 600px) {
-  .card-main__inner {
-    padding-bottom: 105px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .card-main__inner {
-    padding-bottom: 40px;
+    padding-bottom: 45px;
   }
 }
 .card-main__bottom {
@@ -4217,13 +4203,7 @@ input::-webkit-inner-spin-button {
     color: #000000;
   }
 }
-@media (max-width: 768px) {
-  .card-main__info {
-    padding: 15px 30px;
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 500px) {
+@media (max-width: 1024px) {
   .card-main__info {
     padding: 10px 5px;
     font-size: 12px;
@@ -4236,6 +4216,12 @@ input::-webkit-inner-spin-button {
   display: flex;
   right: 15px;
   bottom: 15px;
+}
+@media (max-width: 1024px) {
+  .card-main__block-btn {
+    right: 10px;
+    bottom: 10px;
+  }
 }
 @media screen and (max-width: 500px) {
   .card-main__block-btn {
@@ -4309,6 +4295,23 @@ input::-webkit-inner-spin-button {
     background-size: 24px 24px;
   }
 }
+.card-main__favorites.active span {
+  position: relative;
+}
+.card-main__favorites.active span:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background: url(../img/heard.svg) no-repeat;
+  background-size: 24px 24px;
+}
 .card-main__favorites:before {
   content: "";
   display: inline-block;
@@ -4321,7 +4324,7 @@ input::-webkit-inner-spin-button {
   border-radius: 50%;
   z-index: -1;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card-main__favorites {
     width: 40px;
     height: 40px;
@@ -4355,7 +4358,7 @@ input::-webkit-inner-spin-button {
     background: url(../img/heard.svg);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card-main__icon {
     width: 18px;
     height: 18px;
@@ -7035,22 +7038,18 @@ body .inputMain.focus-visible ~ .item-form__border::before {
     grid-gap: 20px;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .card-block__items {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
   }
 }
-@media screen and (max-width: 700px) {
-  .card-block__items {
-    grid-gap: 20px;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 599px) {
   .card-block__items {
     grid-gap: 10px;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1024px) {
