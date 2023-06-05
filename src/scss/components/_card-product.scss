@@ -72,12 +72,6 @@
     }
   }
 
-  &__slider{
-    @include max1024 {
-      max-width: 500px;
-    }
-  }
-
   &__price {
     margin-bottom: 20px;
   }
@@ -335,6 +329,12 @@
     left: 0;
     bottom: -5px;
     display: none;
+  }
+}
+
+.mySwiper2 {
+  @include max1024 {
+    max-width: 500px;
   }
 }
 

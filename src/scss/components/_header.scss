@@ -286,6 +286,18 @@ transition: 0.3s;
       flex-shrink: 0;
     }
 
+
+    @include max768 {
+      padding-right: 60px;
+      a{
+        margin-left: auto;
+      }
+    }
+
+    @include max600 {
+      padding-right: 40px;
+    }
+
     &.open {
       background: #efa1c3;
       border-radius: 5px;
@@ -299,16 +311,10 @@ transition: 0.3s;
 
       a {
         display: inline-block;
-
       }
 
       @include max600 {
         padding: 10px;
-        padding-right: 40px;
-        a{
-
-          margin-left: auto;
-        }
 
         >span{
           margin-right: 10px;
