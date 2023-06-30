@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Каталог</a>
+                  </li>
+                  <li class="navigation__item">Поиск</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <div class="block-city">
+                <h1 class="title">Поиск</h1>
+              </div>
+
+              <div class="field-search field-search--page">
+                <div class="field-search__wrapper">
+                  <input type="text" class="field-search__input">
+                  <button class="field-search__box btn-reset">
+                    <svg class="field-search__icon">
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Slider-baners hits -->
+              <div class="block-search block-search_margin-bottom">
+                <div class="block-search__items">
+                  <div class="block-search__item city-choose">
+                    <div class="city-choose__inner">
+                      <div class="city-choose__dropdown dropdown dropdown--big">
+                        <button
+                          class="dropdown__button dropdown__button_position"
+                        >
+                          <span class="icon active">Тип сортировки </span>
+                          <svg class="arrow-bottom">
+                            <use
+                              xlink:href="img/sprite.svg#arrow-bottom"
+                            ></use>
+                          </svg>
+                        </button>
+
+                        <ul class="dropdown__list">
+                          <li
+                            class="dropdown__list-item"
+                            data-value="По популярности"
+                          >
+                            По популярности
+                          </li>
+                          <li
+                            class="dropdown__list-item"
+                            data-value="По новизне"
+                          >
+                            По новизне
+                          </li>
+                          <li
+                            class="dropdown__list-item"
+                            data-value="По алфавиту (А-Я)"
+                          >
+                            По алфавиту (А-Я)
+                          </li>
+                          <li
+                            class="dropdown__list-item"
+                            data-value="По алфавиту (Я-А)"
+                          >
+                            По алфавиту (Я-А)
+                          </li>
+                        </ul>
+                        <input
+                          type="text"
+                          name="Day"
+                          class="dropdown__input-hidden"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block-search__item">
+                    <span class="block-search__text">Всего 567 товаров</span>
+                  </div>
+
+                  <div class="block-search__item block-search__item--auto">
+                    <section class="pagination pagination_widht">
+                      <div class="pagination__inner">
+
+                        <button class="pagination__prew arrow">
+                          <svg class="">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                          <ul class="pagination__list">
+                            <li class="pagination__item pagination__item_curent">
+                              <a href="#" class="pagination__link ">01</a>
+                            </li>
+                            <li class="pagination__item pagination__item_slash">
+                              /
+                            </li>
+                            <li class="pagination__item pagination__item_all">
+                              <a href="#" class="pagination__link">16</a>
+                            </li>
+
+                          </ul>
+
+                          <button class="pagination__next arrow">
+                            <svg class="">
+                              <use xlink:href="img/sprite.svg#arrow"></use>
+                            </svg>
+                          </button>
+                      </div>
+                    </section>
+
+                  </div>
+
+                </div>
+              </div>
+              <!-- Slider-baners hits-->
+
+              <div class="card-block card-block--catalog">
+                <ul class="card-block__items">
+
+                  @include('partials/_main-cards.html')
+                </ul>
+              </div>
+
+              @include('partials/_questions.html')
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html')
+      @include('partials/modal.html')
+    </div>
+  </body>
+</html>

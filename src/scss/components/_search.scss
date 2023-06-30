@@ -452,6 +452,9 @@
   width: 100%;
   margin: 0 30px;
   height: 48px;
+
+
+
   @include max1366 {
     margin: 0 15px;
     height: 42px;
@@ -533,6 +536,22 @@
     @include max1366 {
       width: 20px;
       height: 20px;
+    }
+  }
+
+  &--page{
+    margin-left: 0;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    height: 40px;
+
+    @include min768 {
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+    @include min1366 {
+      margin-bottom: 40px;
     }
   }
 }
