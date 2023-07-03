@@ -304,9 +304,9 @@
   height: 100%;
   position: absolute;
 
-  @include max768 {
-    display: none;
-  }
+  //@include max768 {
+  //  display: none;
+  //}
 
   .contacts__bg--first{
     position: absolute;
@@ -330,6 +330,11 @@
     @include max1366 {
       width: 126px;
       height: 126px;
+    }
+
+    @include max768 {
+      top: 40px;
+      left: 15px;
     }
   }
 
@@ -390,6 +395,11 @@
       height: 100px;
       top: 145px;
     }
+
+    @include max768 {
+      top: 60px;
+      right: 10px;
+    }
   }
   .contacts__bg--second{
     width: 175px;
@@ -419,9 +429,9 @@
     }
   }
 
-  @include max768 {
-    display: none;
-  }
+  //@include max768 {
+  //  display: none;
+  //}
 
 }
 

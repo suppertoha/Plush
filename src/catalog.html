@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="main__layout main-layout">
+          <div class="main-layout__container">
+            <div class="main-layout__inner">
+              <!-- Navigation -->
+              <div class="navigation container">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a href="main.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__item">Каталог</li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <div class="catalog">
+                <div class="container">
+                  <div class="catalog__body">
+                    <div class="catalog__bg bg-left">
+                      <div class="catalog__bg--first catalog__img"></div>
+                      <div class="catalog__bg--second catalog__img"></div>
+                      <div class="catalog__bg--third catalog__img"></div>
+                    </div>
+
+                    <div class="catalog__bg bg-right">
+                      <div class="catalog__bg--first catalog__img"></div>
+                      <div class="catalog__bg--second catalog__img"></div>
+                      <div class="catalog__bg--third catalog__img"></div>
+                    </div>
+
+                    <div class="form-catalog__title title-h3">
+                      Каталог
+                    </div>
+
+                    <ul class="catalog__items">
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__name">Хобби и творчество</div>
+                          <div class="card-catalog__icon">
+                            <img loading="lazy" src="img/icon-eye.svg" class="image" alt="img">
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__name">Одежда</div>
+                              <div class="card-catalog__icon">
+                            <img loading="lazy" src="img/icon-eye.svg" class="image" alt="img">
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__name">Канцелярия</div>
+                          <div class="card-catalog__icon">
+                            <img loading="lazy" src="img/icon-eye.svg" class="image" alt="img">
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__name">Для дома</div>
+                          <div class="card-catalog__icon">
+                            <img loading="lazy" src="img/icon-eye.svg" class="image" alt="img">
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__image">
+                            <picture>
+                              <source srcset="img/card-catalog-img1.webp" type="image/webp">
+                              <img loading="lazy" src="img/card-catalog-img1.png" class="image" alt="img">
+                            </picture>
+                          </div>
+                          <div class="card-catalog__name card-catalog__name--img">Игрушки</div>
+                        </a>
+                      </li>
+
+
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__name">Подарки</div>
+                          <div class="card-catalog__icon">
+                            <img loading="lazy" src="img/icon-eye.svg" class="image" alt="img">
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="catalog__card card-catalog">
+                        <a href='#' class="card-catalog__link">
+                          <div class="card-catalog__image">
+                            <picture>
+                              <source srcset="img/card-catalog-img2.webp" type="image/webp">
+                              <img loading="lazy" src="img/card-catalog-img2.png" class="image" alt="img">
+                            </picture>
+                          </div>
+                          <div class="card-catalog__name card-catalog__name--img">Галантерея и украшения</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="container">
+                @include('partials/_questions.html')
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @include('partials/footer.html') @include('partials/modal.html')
+    </div>
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<cd659648-e743-4580-9fbe-f3c5d5602eeb>"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map(
+            "map",
+            {
+              //center: [55.751574, 37.573856],
+              center: [55.86770345439645, 37.58008794047541],
+              zoom: 16.4,
+            },
+            {
+              searchControlProvider: "yandex#search",
+            }
+          ),
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+          myPlacemark = new ymaps.Placemark(
+            myMap.getCenter(),
+            {
+              hintContent: "PlushStory",
+              balloonContent: "PlushStory",
+            },
+            {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: "default#image",
+              // Своё изображение иконки метки.
+              iconImageHref: "img/map.svg",
+              // Размеры метки.
+              iconImageSize: [95, 126],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-30, -60],
+            }
+          ),
+          myPlacemarkWithContent = new ymaps.Placemark(
+            [55.661574, 37.573856],
+            {
+              hintContent: "Собственный значок метки с контентом",
+              balloonContent: "А эта — новогодняя",
+              iconContent: "12",
+            },
+            {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: "default#imageWithContent",
+              // Своё изображение иконки метки.
+              iconImageHref: "images/ball.png",
+              // Размеры метки.
+              iconImageSize: [48, 48],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-24, -24],
+              // Смещение слоя с содержимым относительно слоя с картинкой.
+              iconContentOffset: [15, 15],
+              // Макет содержимого.
+              iconContentLayout: MyIconContentLayout,
+            }
+          );
+
+        myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
+      });
+    </script>
+
+
+  </body>
+</html>
