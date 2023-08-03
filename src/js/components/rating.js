@@ -25,3 +25,38 @@
 //}
 
 //document.querySelectorAll(".rating").forEach((dom) => new Rating(dom));
+
+const stars = document.querySelectorAll('.star');
+  const ratingInput = document.getElementById('rating-value');
+
+  // Добавляем обработчики событий для звезд
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const ratingValue = parseInt(star.dataset.value);
+      ratingInput.value = ratingValue;
+      updateStars(ratingValue);
+    });
+
+    star.addEventListener('mouseover', () => {
+      const ratingValue = parseInt(star.dataset.value);
+      updateStars(ratingValue);
+    });
+
+    star.addEventListener('mouseout', () => {
+      const currentRating = parseInt(ratingInput.value);
+      updateStars(currentRating);
+    });
+  });
+
+  // Функция для обновления стилей звезд
+  function updateStars(rating) {
+    if (ratingInput && !isNaN(rating)) {
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+  }

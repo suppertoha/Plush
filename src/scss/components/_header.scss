@@ -156,6 +156,10 @@ transition: 0.3s;
       margin: 0 -20px;
     }
 
+    @include max768 {
+      padding-bottom: 20px;
+    }
+
     @include max1024 {
       &_border-top {
         .header__item {
@@ -247,7 +251,7 @@ transition: 0.3s;
     display: flex;
     align-items: center;
     padding: 0 20px;
-    padding-right: 45px;
+    padding-right: 40px;
 
     span{
       margin-right: auto;
@@ -303,7 +307,7 @@ transition: 0.3s;
       border-radius: 5px;
       padding: 15px 20px;
       color: #efeeee;
-      padding-right: 60px;
+      padding-right: 40px;
 
       .arrow-bottom {
         fill: #efeeee;
@@ -314,10 +318,10 @@ transition: 0.3s;
       }
 
       @include max600 {
-        padding: 10px;
 
         >span{
           margin-right: 10px;
+          word-break: break-all;
         }
       }
     }

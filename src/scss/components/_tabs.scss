@@ -63,6 +63,12 @@
   margin: 0;
   border: none;
   transition: 0.3s;
+  &:first-child{
+    margin-right: 40px;
+    @include max600 {
+      margin-right: 20px;
+    }
+  }
   @include min1024 {
     &:hover{
       color: #EFA1C3;
@@ -87,7 +93,6 @@
   align-items: center;
   color: #ad6ed3;
   background-color: transparent;
-  margin-right: 40px;
 
   @include max1024 {
     font-size: 40px;
@@ -95,7 +100,6 @@
 
   @include max600 {
     font-size: 22px;
-    margin-right: 20px;
   }
 }
 .tabs-contents {

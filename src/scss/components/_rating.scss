@@ -17,7 +17,7 @@
 
 .rating__group {
   position: relative;
-  height: 4em;
+  height: 3em;
   background-image: url(../img/off.png);
   background-repeat: repeat-x;
   margin: 0 -15px;
@@ -28,7 +28,7 @@
     background-size: 2em auto;
     width: 10em;
     margin: 0 -5px;
-    height: 2em;
+    height: 1.3em;
   }
 }
 
@@ -54,7 +54,7 @@
 
   @include max768 {
     background-size: 2em auto;
-    height: 3em;
+    height: 1.3em;
   }
 }
 
@@ -62,7 +62,17 @@
   outline: none;
 }
 
-.rating__star:hover,
+@include min1024 {
+  .rating__star:hover{
+    background-image: url(../img/on.png);
+    background-size: 4em auto;
+  }
+
+  .rating__star:hover ~ .rating__star {
+    background-image: url(../img/off.png);
+    background-size: 4em auto;
+  }
+}
 .rating__star:checked {
   background-image: url(../img/on.png);
   background-size: 4em auto;
@@ -72,14 +82,6 @@
   }
 }
 
-.rating__star:hover ~ .rating__star {
-  background-image: url(../img/off.png);
-  background-size: 4em auto;
-
-  @include max768 {
-    background-size: 2em auto;
-  }
-}
 
 /* Options */
 
@@ -136,4 +138,23 @@
     z-index: 1;
     width: 10em;
   }
+}
+
+// rating-js
+
+.star-rating {
+  font-size: 0; /* Remove whitespace between inline-block elements */
+}
+
+.star {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/off.png) no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.star.active {
+  background-image: url(../img/on.png);
 }

@@ -10,6 +10,10 @@
     margin-top: 40px;
   }
 
+  @include max768 {
+    padding: 10px;
+  }
+
   @include max600 {
     margin-top: 30px;
   }
@@ -18,6 +22,19 @@
     @include max768 {
       overflow-x: scroll;
       display: grid;
+
+
+      &::-webkit-scrollbar {
+        height: 10px;
+        width: 100%;
+        background: #d0d0d0;
+        border-radius: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+          background-color: #ad6ed3;
+          border-radius: 6px;
+      }
     }
   }
 

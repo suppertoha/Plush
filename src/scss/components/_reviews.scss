@@ -1,17 +1,5 @@
-.reviews {
-  &__title {
-  }
-
-  &__inner {
-  }
-
-  &__form {
-  }
-}
 
 .form-reviews {
-  &__row {
-  }
 
   &__field {
     margin-bottom: 65px;
@@ -214,6 +202,7 @@
 .reviews-slider {
   background: linear-gradient(79.28deg, #ad6ed3 25.33%, #efa1c3 82.39%);
   padding-top: 50px;
+  padding-bottom: 1px;
 
   .card-main__item {
     justify-content: center;
@@ -248,15 +237,11 @@
 
   &__header {
     display: flex;
-    margin-bottom: 20px;
 
     @include max1366 {
       display: block;
     }
 
-    @include max600 {
-      margin-bottom: 10px;
-    }
   }
 
   &__image {
@@ -267,28 +252,37 @@
       float: left;
       margin-right: 20px;
     }
+
+    @media screen and (max-width: 450px) {
+      float: none;
+      margin-right: 0;
+    }
   }
 
   &__img {
     display: flex;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+
     overflow: hidden;
     img {
-      width: 100%;
-      height: 100%;
+      border-radius: 50%;
+      max-width: 140px;
+      max-height: 140px;
+      @include max1366 {
+        max-width: 100px;
+        max-height: 100px;
+      }
+
+      @include max600 {
+        max-width: 80px;
+        max-height: 80px;
+      }
     }
 
-    @include max1366 {
-      width: 100px;
-      height: 100px;
+    @media screen and (max-width: 450px) {
+      margin: 0 auto;
+      margin-bottom: 10px;
     }
 
-    @include max600 {
-      width: 80px;
-      height: 80px;
-    }
   }
 
   &__date {
@@ -300,18 +294,17 @@
     line-height: 1;
     color: #1e1e1e;
     margin-top: auto;
-    align-self: flex-end;
-    margin-right: 48px;
+    align-self: center;
     flex-shrink: 0;
+    margin: 5px;
+    flex-grow: 1;
 
     @include max1366 {
       font-size: 14px;
-      margin-right: 15px;
     }
 
     @include max600 {
       font-size: 14px;
-      padding-right: 10px;
       margin-right: auto;
     }
   }
@@ -331,14 +324,19 @@
 
     @include max600 {
       line-height: 126.2%;
-      margin-bottom: 10px;
     }
   }
 
   &__footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: auto;
+    margin: -5px;
+    margin-top: 20px;
+    width: 100%;
+
+    @include max600 {
+      margin-top: 10px;
+    }
   }
 
   &__navigation {
@@ -376,25 +374,22 @@
 
   &__block {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     margin-top: auto;
-    margin-left: auto;
 
     @include max1024 {
       width: auto;
-      margin-left: auto;
     }
 
-    @include max600 {
-      margin: 0 auto;
-    }
   }
 
   &__rating {
     display: flex;
     align-items: center;
+    margin: 5px;
   }
 
   &__item {
@@ -442,7 +437,7 @@
     font-size: 25px;
     line-height: 1.2;
     color: #1e1e1e;
-    margin-left: 20px;
+    margin: 5px;
 
     @include max1366 {
       font-size: 18px;

@@ -4,7 +4,15 @@
   overflow: visible;
   &.active {
     overflow: hidden;
-    max-height: 194px;
+    max-height: 200px;
+
+    @include max600 {
+      max-height: 196px;
+    }
+
+    @media screen and (max-width: 476px) {
+      max-height: 189px;
+    }
   }
 }
 
@@ -12,7 +20,7 @@
   display: none;
   max-width: 100%;
   margin-bottom: 10px;
-  margin-top: -4px;
+  margin-top: 10px;
   font-size: 14px;
   color: #efa1c3;
   &.btn-reset {

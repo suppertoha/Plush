@@ -10,7 +10,7 @@ import './components/dropdown';
 //import './components/show-more';
 import './components/search-button';
 import './components/rating';
-import './components/mask';
+//import './components/mask';
 import './components/search-form';
 //import './components/videos';
 import './components/header-height';
@@ -22,6 +22,7 @@ import './components/scrollable';
 import './components/body-scroll';
 import './components/slider-product';
 import './components/cards-mobile-click';
+import './components/card-mouse-hover.js';
 
 
 

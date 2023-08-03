@@ -31,13 +31,13 @@
     .price-card {
       transition: max-height 6s ease-out;
     }
-    @include min1024 {
-      &:hover {
-        .card-main__bottom {
-          bottom: -60px;
-        }
-      }
-    }
+    //@include min1024 {
+    //  &:hover {
+    //    .card-main__bottom {
+    //      bottom: -60px;
+    //    }
+    //  }
+    //}
 
   }
 
@@ -45,7 +45,7 @@
     position: relative;
     z-index: 3;
     background: #efeeee;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 
 
     @include max1300 {
@@ -62,16 +62,15 @@
       }
     }
     @include max1024 {
-      padding-bottom: 15px;
+      margin-bottom: 15px;
     }
 
     @include max1300 {
-      padding-bottom: 10px;
+      margin-bottom: 10px;
     }
 
     @media screen and (max-width: 500px) {
       margin-bottom: 8px;
-      //padding-bottom: 0;
     }
   }
 
@@ -88,7 +87,10 @@
           font-size: 16px;
         }
       }
+
     }
+
+
   }
 
   &__navigation {
@@ -325,19 +327,26 @@
         svg {
           fill: #1e1e1e;
         }
+
+        svg {
+          stroke: #1e1e1e;
+        }
       }
     }
 
     color: rgba(30, 30, 30, 0.5);
     svg {
       display: flex;
-      fill: #626262;
+      fill: rgba(30, 30, 30, 0.4);
+      stroke:rgba(30, 30, 30, 0.4);
       height: 12px;
       width: 24px;
       margin-left: 15px;
       transition: 0.3s;
       flex-shrink: 0;
     }
+
+
 
     @include max1366 {
       font-size: 14px;
@@ -363,13 +372,16 @@
       background: linear-gradient(79.28deg, #ad6ed3 25.33%, #efa1c3 82.39%);
       border: none;
       width: 100%;
-      padding: 18px 10px;
+      padding: 20px 10px;
       font-family: "Gotham Pro";
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
       line-height: 1;
       color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
 
       span {
@@ -405,7 +417,7 @@
       }
 
       @media screen and (max-width: 414px) {
-        padding: 10px;
+        padding: 15px 10px;
       }
     }
   }
@@ -440,6 +452,7 @@
     color: #000000;
     padding: 0 15px;
     text-align: center;
+    min-height: 40px;
 
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -462,6 +475,7 @@
 
     @media screen and (max-width: 500px) {
       font-size: 12px;
+      min-height: 34px;;
     }
   }
 
@@ -487,31 +501,14 @@
 
   &__inner {
     background: #efeeee;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding-bottom: 55px;
     height: 100%;
 
     @include max1366 {
-      border-radius: 15px;
-    }
-
-    @include max1300 {
-      padding-bottom: 45px;
-    }
-
-    @media screen and (max-width: 540px) {
-      padding-bottom: 40px;
-
-    }
-
-    @media screen and (max-width: 500px) {
-      padding-bottom: 30px;
-    }
-    @media screen and (max-width: 414px) {
-      padding-bottom: 25px;
+      border-radius: 15px 15px 0 0;
     }
 
   }
@@ -525,7 +522,7 @@
     right: 0;
     border-radius: 0 0 15px 15px;
     overflow: hidden;
-    z-index: 2;
+    z-index: -1;
   }
 
   &__block {
@@ -677,26 +674,30 @@
       position: relative;
     }
 
-    @include min1024 {
-      &:hover {
-        span {
-          position: relative;
+    //@include min1024 {
+    //  &:hover {
+    //    span {
+    //      position: relative;
 
-          &:before {
-            content: "";
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            transition: 0.3s;
-            background: url(../img/heard.svg) no-repeat;
-            background-size: 24px 24px;
-          }
-        }
-      }
-    }
+    //      &:before {
+    //        content: "";
+    //        display: inline-block;
+    //        width: 100%;
+    //        height: 100%;
+    //        position: absolute;
+    //        left: 0px;
+    //        top: 0px;
+    //        transition: 0.3s;
+    //        background: url(../img/heard.svg) no-repeat;
+    //        background-size: 17px 17px;
+
+    //        @media screen and (min-width: 1025px) {
+    //          background-size: 24px 24px;
+    //        }
+    //      }
+    //    }
+    //  }
+    //}
 
     &.active {
       span {
@@ -859,7 +860,8 @@
     height: 100%;
     outline: none;
     font-weight: 500;
-    min-width: 1ex;
+    min-width: 2ex;
+    text-align: center;
   }
 
   &__svg {
@@ -915,7 +917,8 @@
     flex-direction: column;
     align-items: center;
     padding: 10px 5px;
-    max-height: 60px;
+    flex-grow: 1;
+    //max-height: 60px;
 
     &:not(:first-child) {
       border-left: 1px solid rgba(30, 30, 30, 0.5);
@@ -956,15 +959,9 @@
     font-family: "Gotham Pro";
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 13px;
+    font-size: 10px;
+    line-height: 1.2;
     color: rgba(30, 30, 30, 0.5);
-    @include max1366 {
-      font-size: 12px;
-    }
-    @include max1300 {
-      font-size: 10px;
-    }
     @include max1300 {
       margin-top: 5px;
     }

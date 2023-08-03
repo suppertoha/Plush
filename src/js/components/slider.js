@@ -195,7 +195,7 @@ if (sliderReviews) {
   const swiperAnime = new Swiper(sliderReviews, {
     loop: false,
     grabCursor: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 10,
     //centeredSlides: true,
     navigation: {
@@ -219,8 +219,8 @@ if (sliderReviews) {
 
   breakpoints: {
 
-    768: {
-      slidesPerView: '1.5',
+    600: {
+      slidesPerView: '1',
       spaceBetween: 20,
     },
 

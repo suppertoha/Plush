@@ -73,19 +73,19 @@
   }
 
   &__price {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   &__delivery {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   &__marketplaylist {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   &__product {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 .slider-carousel {
@@ -170,8 +170,8 @@
 }
 .price-block {
   &__inner {
-    display: flex;
-
+    display: inline-flex;
+    flex-wrap: wrap;
     position: relative;
     &::after {
       content: "";
@@ -211,6 +211,10 @@
       -webkit-mask-composite: destination-out;
       mask-composite: exclude;
     }
+
+    :nth-child(n+4) {
+      display: none;
+    }
   }
 
   &__item {
@@ -218,6 +222,7 @@
     padding: 20px;
     text-align: center;
     position: relative;
+    min-width: 199px;
     &:not(:first-child) {
       &:before {
         content: "";
@@ -227,6 +232,69 @@
         transition: 0.3s;
         width: 2px;
         height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        border-radius: 15px;
+        padding: 2px;
+        z-index: -1;
+        background: -o-linear-gradient(left, #ad6ed3 0%, #efa1c3 100%);
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(#ad6ed3),
+          to(#efa1c3)
+        );
+        background: linear-gradient(90deg, #ad6ed3 0%, #efa1c3 100%);
+        -webkit-mask: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              color-stop(0, #fff)
+            )
+            content-box,
+          -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+      }
+    }
+
+    &:nth-child(4){
+      &::before{
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1600px) {
+      min-width: 163px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      min-width: 140px;
+    }
+
+    @include max768 {
+      min-width: 100px;
+    }
+
+    @include max375 {
+      min-width: 96px;
+    }
+
+    &:nth-child(n+4) {
+      &::after {
+        content: "";
+        display: inline-block;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        width: 100%;
+        height: 2px;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -515,12 +583,16 @@
   margin: 0px -15px;
 
   &__item {
-    align-self: center;
     margin: 10px 15px;
+    display: flex;
+    align-items: center;
+
+    .stepper{
+      padding-bottom: 0;
+    }
 
     @include max600 {
       &:nth-child(3) {
-        width: 100%;
         margin-top: 24px;
       }
     }
@@ -532,6 +604,7 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 1;
+    width: 100%;
     color: #efa1c3;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
 
@@ -542,15 +615,15 @@
 
   &__stepper {
     min-width: 160px;
-    padding: 0;
+    padding: 0 0 20px 0;
 
     @include max1366 {
       min-width: 140px;
     }
 
     @include max600 {
-      padding: 0;
-      min-width: 140px;
+      max-width: 80%;
+      min-width: 110px;
     }
   }
 

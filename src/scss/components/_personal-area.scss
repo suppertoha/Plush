@@ -150,6 +150,8 @@
 
   display: inline-flex;
   position: relative;
+  overflow: hidden;
+  border-radius: 50%;
   &__info {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -178,6 +180,9 @@
 
   picture {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:before {
       content: "";
       display: inline-block;

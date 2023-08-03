@@ -1,3 +1,5 @@
+
+
 const mainSliderContainer = document.querySelector(".mySwiper");
 const thumbsSliderContainer = document.querySelector(".mySwiper2");
 
@@ -15,7 +17,6 @@ if (mainSliderContainer && thumbsSliderContainer) {
 
     breakpoints: {
 
-
       600: {
         spaceBetween: 10,
         slidesPerView: 5,
@@ -32,3 +33,4 @@ if (mainSliderContainer && thumbsSliderContainer) {
     },
   });
 }
+
